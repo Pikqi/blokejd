@@ -15,6 +15,8 @@ func _process(delta: float) -> void:
 func add_hint_to_inventory(name: String, image: Texture2D):
 	var t = INVETORY_HINT.instantiate()
 	t.texture = image
+	t.letter = name
+	print_debug(name)
 	$HBoxContainer.add_child(t)
 	var hints = get_tree().get_nodes_in_group("inventory_hint")
 	for hint: InventoryHint in hints:
@@ -24,3 +26,7 @@ func add_hint_to_inventory(name: String, image: Texture2D):
 func reset():
 	for childd in $HBoxContainer.get_children():
 		$HBoxContainer.remove_child(childd)
+func get_selected_letter():
+	for childd: InventoryHint in $HBoxContainer.get_children():
+		if childd.is_selected:
+			return childd.letter

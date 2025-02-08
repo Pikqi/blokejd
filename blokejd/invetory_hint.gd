@@ -1,10 +1,12 @@
 extends TextureRect
 class_name InventoryHint
-var is_selected = false
 
+var is_selected = false
+@export var letter: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Label.text = letter
 	pass # Replace with function body.
 
 

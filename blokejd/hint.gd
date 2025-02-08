@@ -1,13 +1,8 @@
 extends Node2D
 class_name Hint
 
-enum HintEnum {
-	p_drvo
-}
-
 @export var image: Texture2D
-@export var hintenum: HintEnum
-@export var a: CollisionShape2D
+@export var letter: String
 
 signal hint_clicked
 

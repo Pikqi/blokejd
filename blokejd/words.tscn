@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://u5ke56djwgur"]
 
-[ext_resource type="Texture2D" uid="uid://dkgc04kko4lkh" path="res://assets/Game_Font.png" id="1_ijcjc"]
-[ext_resource type="Script" path="res://reci.gd" id="1_qcqys"]
+[ext_resource type="Script" path="res://words.gd" id="1_upbqn"]
+[ext_resource type="Texture2D" uid="uid://dkgc04kko4lkh" path="res://assets/Game_Font.png" id="2_w4rih"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pd7yp"]
-texture = ExtResource("1_ijcjc")
+texture = ExtResource("2_w4rih")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -39,8 +39,8 @@ texture = ExtResource("1_ijcjc")
 [sub_resource type="TileSet" id="TileSet_22qk6"]
 sources/0 = SubResource("TileSetAtlasSource_pd7yp")
 
-[node name="Reci" type="Node2D"]
-script = ExtResource("1_qcqys")
+[node name="Words" type="Node2D"]
+script = ExtResource("1_upbqn")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(3, 3)

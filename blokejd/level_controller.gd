@@ -10,7 +10,7 @@ func _ready() -> void:
 
 
 func on_hint_clicked(hint: Hint): 
-	Inventory.add_hint_to_inventory("temp", hint.image)
+	Inventory.add_hint_to_inventory(hint.letter, hint.image)
 	get_tree().queue_delete(hint)
 	
 func level_passed():

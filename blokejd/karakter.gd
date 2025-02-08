@@ -1,9 +1,10 @@
 extends CharacterBody2D
 class_name Character
 @export var SPEED: int = 300
-var is_moving = true
+var is_moving = false
 var exited = false
 signal character_exited
+
 
 func _physics_process(delta: float) -> void:
 	if is_moving:
