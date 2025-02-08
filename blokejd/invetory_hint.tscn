@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwnn7o8busxhx"]
+
+[ext_resource type="Texture2D" uid="uid://parcptrowo5a" path="res://icon.svg" id="1_ue5ao"]
+[ext_resource type="Script" path="res://invetory_hint.gd" id="2_aslvm"]
+
+[node name="InvetoryHint" type="TextureRect" groups=["inventory_hint"]]
+texture = ExtResource("1_ue5ao")
+stretch_mode = 4
+script = ExtResource("2_aslvm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 0.4)
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

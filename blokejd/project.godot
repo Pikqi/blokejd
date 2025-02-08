@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 window/size/resizable=false
 
+[global_group]
+
+hint=""
+inventory_hint=""
+
 [input]
 
 mouse_1={
