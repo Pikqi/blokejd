@@ -18,3 +18,9 @@ func add_hint_to_inventory(name: String, image: Texture2D):
 	for hint: InventoryHint in hints:
 		hint.is_selected = false
 	t.is_selected = true
+
+func reset():
+	for childd in $HBoxContainer.get_children():
+		$HBoxContainer.remove_child(childd)
+		
+	

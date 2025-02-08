@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=4 uid="uid://d0nfl3labvb3k"]
 
-[ext_resource type="Texture2D" uid="uid://b21h5wk07ldj5" path="res://Legacy_Adventure_Pack/Assets/Assets.png" id="1_4cvec"]
-[ext_resource type="Script" path="res://test.gd" id="1_4uy1k"]
-[ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://karakter_test.tscn" id="2_njv5y"]
-[ext_resource type="PackedScene" uid="uid://cl7ls8hfg7qpg" path="res://hint.tscn" id="3_0bkva"]
-[ext_resource type="Texture2D" uid="uid://parcptrowo5a" path="res://icon.svg" id="4_042is"]
-[ext_resource type="PackedScene" uid="uid://tqdnox3ourwk" path="res://inventory.tscn" id="5_7im18"]
+[ext_resource type="Script" path="res://Levels/Level1.gd" id="1_vs01q"]
+[ext_resource type="Texture2D" uid="uid://b21h5wk07ldj5" path="res://Legacy_Adventure_Pack/Assets/Assets.png" id="2_lnayi"]
+[ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://karakter_test.tscn" id="3_1hvn3"]
+[ext_resource type="PackedScene" uid="uid://cl7ls8hfg7qpg" path="res://hint.tscn" id="4_n7arl"]
+[ext_resource type="Texture2D" uid="uid://parcptrowo5a" path="res://icon.svg" id="5_ydsqf"]
+[ext_resource type="PackedScene" uid="uid://c4t3pyw3q7ck1" path="res://level_controller.tscn" id="7_sokv4"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j072r"]
 load_path = "res://.godot/imported/Assets.png-8ff8aa10870b6dc291ba061aea56a22b.ctex"
@@ -352,7 +352,7 @@ texture = SubResource("CompressedTexture2D_j072r")
 sources/0 = SubResource("TileSetAtlasSource_f47l7")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_34kq3"]
-texture = ExtResource("1_4cvec")
+texture = ExtResource("2_lnayi")
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -693,7 +693,7 @@ texture = ExtResource("1_4cvec")
 sources/0 = SubResource("TileSetAtlasSource_34kq3")
 
 [node name="Test" type="Node2D"]
-script = ExtResource("1_4uy1k")
+script = ExtResource("1_vs01q")
 
 [node name="Background" type="TileMapLayer" parent="."]
 scale = Vector2(3, 3)
@@ -705,28 +705,28 @@ scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAAAAAoAAAADAAAAAAABAAoAAAADAAAAAAACAAoAAAADAAAAAAADAAoAAAADAAAAAAAEAAoAAAADAAAAAAAFAAoAAAADAAAAAAAGAAoAAAADAAAAAAAHAAoAAAADAAAAAAAIAAoAAAADAAAAAAAJAAoAAAADAAAAAAAKAAoAAAADAAAAAAALAAoAAAADAAAAAAAPAAoAAAADAAAAAAAQAAoAAAADAAAAAAARAAoAAAADAAAAAAASAAoAAAADAAAAAAATAAoAAAADAAAAAAAUAAoAAAADAAAAAAAVAAoAAAADAAAAAAAWAAoAAAADAAAAAAAXAAoAAAADAAAAAAAHAAsAAAAAAAsAAAAIAAsAAAAAAAsAAAAJAAsAAAAAAAsAAAAKAAsAAAAAAAsAAAALAAsAAAAAAAsAAAAMAAsAAAAAAAsAAAANAAsAAAAAAAsAAAAOAAsAAAAAAAsAAAAPAAsAAAAAAAsAAAAQAAsAAAAAAAsAAAARAAsAAAAAAAsAAAASAAsAAAAAAAsAAAATAAsAAAAAAAsAAAAIAAwAAAAAAAsAAAAJAAwAAAAAAAsAAAAKAAwAAAAAAAsAAAALAAwAAAAAAAsAAAAMAAwAAAAAAAsAAAANAAwAAAAAAAsAAAAOAAwAAAAAAAsAAAAPAAwAAAAAAAsAAAAQAAwAAAAAAAsAAAARAAwAAAAAAAsAAAAJAA0AAAAAAAsAAAAKAA0AAAAAAAsAAAALAA0AAAAAAAsAAAAMAA0AAAAAAAsAAAANAA0AAAAAAAsAAAAOAA0AAAAAAAsAAAAPAA0AAAAAAAsAAAAQAA0AAAAAAAsAAAARAA0AAAAAAAsAAAASAA0AAAAAAAsAAAATAA0AAAAAAAsAAAATAAwAAAAAAAsAAAASAAwAAAAAAAsAAAAIAA0AAAAAAAsAAAAHAAwAAAAAAAsAAAAHAA0AAAAAAAsAAAANAAgAAAASAA4AAAAPAAgAAAAUAA4AAAAQAAgAAAAVAA4AAAAOAAgAAAATAA4AAAA=")
 tile_set = SubResource("TileSet_yyqem")
 
-[node name="Karakter" parent="." instance=ExtResource("2_njv5y")]
+[node name="Karakter" parent="." instance=ExtResource("3_1hvn3")]
 position = Vector2(91, 433)
 scale = Vector2(4.68, 4.68)
 
-[node name="Hint" parent="." groups=["hint"] instance=ExtResource("3_0bkva")]
+[node name="Hint" parent="." groups=["hint"] instance=ExtResource("4_n7arl")]
 position = Vector2(751, 292)
 input_pickable = true
-image = ExtResource("4_042is")
+image = ExtResource("5_ydsqf")
 
-[node name="Inventory" parent="." instance=ExtResource("5_7im18")]
-
-[node name="Hint2" parent="." groups=["hint"] instance=ExtResource("3_0bkva")]
+[node name="Hint2" parent="." groups=["hint"] instance=ExtResource("4_n7arl")]
 position = Vector2(435, 430)
 input_pickable = true
-image = ExtResource("4_042is")
+image = ExtResource("5_ydsqf")
 
-[node name="Hint3" parent="." groups=["hint"] instance=ExtResource("3_0bkva")]
+[node name="Hint3" parent="." groups=["hint"] instance=ExtResource("4_n7arl")]
 position = Vector2(920, 335)
 input_pickable = true
-image = ExtResource("4_042is")
+image = ExtResource("5_ydsqf")
 
-[node name="Hint4" parent="." groups=["hint"] instance=ExtResource("3_0bkva")]
+[node name="Hint4" parent="." groups=["hint"] instance=ExtResource("4_n7arl")]
 position = Vector2(299, 256)
 input_pickable = true
-image = ExtResource("4_042is")
+image = ExtResource("5_ydsqf")
+
+[node name="LevelController" parent="." instance=ExtResource("7_sokv4")]

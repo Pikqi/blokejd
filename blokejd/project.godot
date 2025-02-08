@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Blokejd"
-run/main_scene="res://test.tscn"
+run/main_scene="res://Levels/Level1.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Inventory="*res://inventory.tscn"
 
 [display]
 
@@ -23,6 +27,11 @@ window/size/resizable=false
 
 hint=""
 inventory_hint=""
+character=""
+
+[gui]
+
+theme/custom_font="res://assets/04b_30/04B_30__.TTF"
 
 [input]
 
