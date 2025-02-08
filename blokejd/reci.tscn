@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://u5ke56djwgur"]
+
+[ext_resource type="Texture2D" uid="uid://dkgc04kko4lkh" path="res://assets/Game_Font.png" id="1_ijcjc"]
+[ext_resource type="Script" path="res://reci.gd" id="1_qcqys"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pd7yp"]
+texture = ExtResource("1_ijcjc")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_22qk6"]
+sources/0 = SubResource("TileSetAtlasSource_pd7yp")
+
+[node name="Reci" type="Node2D"]
+script = ExtResource("1_qcqys")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_22qk6")

@@ -9,7 +9,7 @@ func _ready() -> void:
 		hint.hint_clicked.connect(on_hint_clicked.bind(hint))
 
 
-func on_hint_clicked(hint: Hint):
+func on_hint_clicked(hint: Hint): 
 	Inventory.add_hint_to_inventory("temp", hint.image)
 	get_tree().queue_delete(hint)
 	
@@ -22,4 +22,5 @@ func _process(delta: float) -> void:
 	
 func handle_character_exited():
 	TransitionRect.transition_to(LEVEL_2)
+	(get_tree().get_first_node_in_group("character") as  Character).is_moving = false
 	pass

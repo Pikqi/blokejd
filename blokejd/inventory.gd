@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+
+
 const INVETORY_HINT = preload("res://invetory_hint.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,5 +24,3 @@ func add_hint_to_inventory(name: String, image: Texture2D):
 func reset():
 	for childd in $HBoxContainer.get_children():
 		$HBoxContainer.remove_child(childd)
-		
-	
