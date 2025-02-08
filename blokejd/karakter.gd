@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Character
 @export var SPEED: int = 300
-var is_moving = false
+var is_moving = true
 var exited = false
 signal character_exited
 
