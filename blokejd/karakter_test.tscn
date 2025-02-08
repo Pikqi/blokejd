@@ -1,10 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxy3yeut2p5rk"]
+[gd_scene load_steps=6 format=3 uid="uid://dxy3yeut2p5rk"]
 
 [ext_resource type="Texture2D" uid="uid://parcptrowo5a" path="res://icon.svg" id="1_ruuqx"]
+[ext_resource type="Texture2D" uid="uid://b3h1tupfwkgra" path="res://assets/SIlent_Messenger_Idle_1.png" id="2_75gu3"]
+[ext_resource type="Texture2D" uid="uid://cww8tuyxs1wgg" path="res://assets/Silent_Messenger_Idle_2.png" id="3_an23u"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_axlnj"]
 radius = 32.0
 height = 64.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0xsa5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_75gu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_an23u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [node name="Karakter" type="CharacterBody2D"]
 
@@ -12,5 +28,12 @@ height = 64.0
 shape = SubResource("CapsuleShape2D_axlnj")
 
 [node name="Icon" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.465, 0.465)
 texture = ExtResource("1_ruuqx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+sprite_frames = SubResource("SpriteFrames_0xsa5")
+autoplay = "default"
+frame_progress = 0.242975

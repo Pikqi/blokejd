@@ -18,7 +18,6 @@ func _process(delta: float) -> void:
 			$ColorRect.visible = true
 			
 
-
 func _on_gui_input(event: InputEvent) -> void:
 	if(event.is_action_pressed("mouse_1")):
 		var hints = get_tree().get_nodes_in_group("inventory_hint")
