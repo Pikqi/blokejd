@@ -39,7 +39,7 @@ texture = ExtResource("2_w4rih")
 [sub_resource type="TileSet" id="TileSet_22qk6"]
 sources/0 = SubResource("TileSetAtlasSource_pd7yp")
 
-[node name="Words" type="Node2D"]
+[node name="Words" type="Node2D" groups=["word"]]
 script = ExtResource("1_upbqn")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]

@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Inventory="*res://inventory.tscn"
 TransitionRect="*res://transition_rect.tscn"
+LevelController="*res://level_controller.tscn"
 
 [display]
 
@@ -29,6 +30,7 @@ window/size/resizable=false
 hint=""
 inventory_hint=""
 character=""
+word=""
 
 [gui]
 

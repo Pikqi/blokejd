@@ -1,11 +1,15 @@
-[gd_scene load_steps=6 format=4 uid="uid://cim55btugye6f"]
+[gd_scene load_steps=10 format=4 uid="uid://cim55btugye6f"]
 
-[ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://karakter_test.tscn" id="1_k0nmc"]
-[ext_resource type="PackedScene" uid="uid://c4t3pyw3q7ck1" path="res://level_controller.tscn" id="2_1uv4a"]
-[ext_resource type="Texture2D" uid="uid://b21h5wk07ldj5" path="res://Legacy_Adventure_Pack/Assets/Assets.png" id="3_oxlwq"]
+[ext_resource type="Script" path="res://Levels/level_2.gd" id="1_uebjr"]
+[ext_resource type="Texture2D" uid="uid://b21h5wk07ldj5" path="res://Legacy_Adventure_Pack/Assets/Assets.png" id="2_wco68"]
+[ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://karakter_test.tscn" id="3_p2taw"]
+[ext_resource type="PackedScene" uid="uid://c4t3pyw3q7ck1" path="res://level_controller.tscn" id="4_klboh"]
+[ext_resource type="PackedScene" uid="uid://u5ke56djwgur" path="res://words.tscn" id="5_b2aq3"]
+[ext_resource type="PackedScene" uid="uid://cl7ls8hfg7qpg" path="res://hint.tscn" id="6_sig1j"]
+[ext_resource type="Texture2D" uid="uid://parcptrowo5a" path="res://icon.svg" id="7_emqbv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0e0yf"]
-texture = ExtResource("3_oxlwq")
+texture = ExtResource("2_wco68")
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -346,14 +350,22 @@ texture = ExtResource("3_oxlwq")
 sources/0 = SubResource("TileSetAtlasSource_0e0yf")
 
 [node name="Level2" type="Node2D"]
+script = ExtResource("1_uebjr")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAAAAAgAAAADAAYAAAABAAgAAAADAAYAAAACAAgAAAADAAYAAAADAAgAAAADAAYAAAAEAAgAAAADAAYAAAAFAAgAAAADAAYAAAAGAAgAAAADAAYAAAAHAAgAAAADAAYAAAAIAAgAAAADAAYAAAAJAAgAAAADAAYAAAAKAAgAAAADAAYAAAALAAgAAAADAAYAAAAMAAgAAAADAAYAAAANAAgAAAADAAYAAAAOAAgAAAADAAYAAAAPAAgAAAADAAYAAAAQAAgAAAADAAYAAAARAAgAAAADAAYAAAASAAgAAAADAAYAAAATAAgAAAADAAYAAAAUAAgAAAADAAYAAAAVAAgAAAADAAYAAAAWAAgAAAADAAYAAAAXAAgAAAADAAYAAAA=")
 tile_set = SubResource("TileSet_h6f6t")
 
-[node name="Karakter" parent="." instance=ExtResource("1_k0nmc")]
+[node name="Karakter" parent="." instance=ExtResource("3_p2taw")]
 position = Vector2(52, 335)
 scale = Vector2(5, 5)
 
-[node name="LevelController" parent="." instance=ExtResource("2_1uv4a")]
+[node name="LevelController" parent="." instance=ExtResource("4_klboh")]
+
+[node name="Hint" parent="." instance=ExtResource("6_sig1j")]
+position = Vector2(490, 194)
+image = ExtResource("7_emqbv")
+letter = "b"
+
+[node name="Words" parent="." instance=ExtResource("5_b2aq3")]

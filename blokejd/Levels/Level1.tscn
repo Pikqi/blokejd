@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://d0nfl3labvb3k"]
+[gd_scene load_steps=12 format=4 uid="uid://d0nfl3labvb3k"]
 
 [ext_resource type="Script" path="res://Levels/Level1.gd" id="1_vs01q"]
 [ext_resource type="Texture2D" uid="uid://b21h5wk07ldj5" path="res://Legacy_Adventure_Pack/Assets/Assets.png" id="2_lnayi"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cl7ls8hfg7qpg" path="res://hint.tscn" id="4_n7arl"]
 [ext_resource type="Texture2D" uid="uid://parcptrowo5a" path="res://icon.svg" id="5_ydsqf"]
 [ext_resource type="PackedScene" uid="uid://u5ke56djwgur" path="res://words.tscn" id="7_sd5qj"]
-[ext_resource type="PackedScene" uid="uid://c4t3pyw3q7ck1" path="res://level_controller.tscn" id="7_sokv4"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j072r"]
 load_path = "res://.godot/imported/Assets.png-8ff8aa10870b6dc291ba061aea56a22b.ctex"
@@ -732,8 +731,6 @@ letter = "c"
 position = Vector2(299, 256)
 input_pickable = true
 image = ExtResource("5_ydsqf")
-
-[node name="LevelController" parent="." instance=ExtResource("7_sokv4")]
 
 [node name="Reci" parent="." instance=ExtResource("7_sd5qj")]
 position = Vector2(340, 102)
