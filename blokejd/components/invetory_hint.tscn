@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bwnn7o8busxhx"]
 
 [ext_resource type="Texture2D" uid="uid://parcptrowo5a" path="res://icon.svg" id="1_ue5ao"]
-[ext_resource type="Script" path="res://invetory_hint.gd" id="2_aslvm"]
+[ext_resource type="Script" path="res://components/invetory_hint.gd" id="2_aslvm"]
 
 [node name="InvetoryHint" type="TextureRect" groups=["inventory_hint"]]
 texture_filter = 3

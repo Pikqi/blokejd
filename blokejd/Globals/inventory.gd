@@ -2,7 +2,7 @@ extends CanvasLayer
 
 
 
-const INVETORY_HINT = preload("res://invetory_hint.tscn")
+const INVETORY_HINT = preload("res://components/invetory_hint.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

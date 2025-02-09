@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://u5ke56djwgur"]
 
-[ext_resource type="Script" path="res://words.gd" id="1_upbqn"]
+[ext_resource type="Script" path="res://components/words.gd" id="1_upbqn"]
 [ext_resource type="TileSet" uid="uid://curloulfinxeg" path="res://TileSets/lettersTileset.tres" id="2_3lcb8"]
 
 [node name="Words" type="Node2D" groups=["word"]]

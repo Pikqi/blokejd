@@ -1,10 +1,10 @@
-[gd_scene load_steps=27 format=4 uid="uid://d0nfl3labvb3k"]
+[gd_scene load_steps=29 format=4 uid="uid://d0nfl3labvb3k"]
 
 [ext_resource type="Script" path="res://Levels/Level1.gd" id="1_vs01q"]
 [ext_resource type="Texture2D" uid="uid://bsk7iar7m1eji" path="res://assets/Background_Level_1.png" id="2_0wndg"]
-[ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://karakter_test.tscn" id="3_1hvn3"]
+[ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://components/karakter_test.tscn" id="3_1hvn3"]
 [ext_resource type="Texture2D" uid="uid://cqou6whkd7us5" path="res://assets/Vulture_Idle/Vulture_Idle_1.png" id="7_58ef2"]
-[ext_resource type="PackedScene" uid="uid://u5ke56djwgur" path="res://words.tscn" id="7_sd5qj"]
+[ext_resource type="PackedScene" uid="uid://u5ke56djwgur" path="res://components/words.tscn" id="7_sd5qj"]
 [ext_resource type="Texture2D" uid="uid://bfpeto8xvc2vq" path="res://assets/Vulture_end/Vulture_End_Animation_1.png" id="7_utelg"]
 [ext_resource type="Texture2D" uid="uid://8xm1ko1165a8" path="res://assets/Vulture_end/Vulture_End_Animation_2.png" id="8_k7e24"]
 [ext_resource type="TileSet" uid="uid://bcpa8ecnl6x1k" path="res://TileSets/tileset1.tres" id="8_pfuxe"]
@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://db0uwco1m5n8b" path="res://assets/level1/Drvo Desno.png" id="20_rdg17"]
 [ext_resource type="Texture2D" uid="uid://er1d7wwx2fqr" path="res://assets/level1/Drvo Levo.png" id="21_v6kvm"]
 [ext_resource type="Texture2D" uid="uid://c32tltb3pbwy5" path="res://assets/level1/Drvo sa M Lijanom.png" id="22_fwcg4"]
-[ext_resource type="PackedScene" uid="uid://cl7ls8hfg7qpg" path="res://hint.tscn" id="23_g3im6"]
+[ext_resource type="PackedScene" uid="uid://cl7ls8hfg7qpg" path="res://components/hint.tscn" id="23_g3im6"]
 [ext_resource type="Texture2D" uid="uid://lxt605n8qt3f" path="res://assets/level1/M Lijane.png" id="23_o8yb6"]
 [ext_resource type="Texture2D" uid="uid://bxmsiwtxpojsw" path="res://assets/level1/Obicne Lijane.png" id="25_1wp7u"]
 
@@ -91,6 +91,12 @@ animations = [{
 "name": &"idle",
 "speed": 3.0
 }]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_08rg2"]
+load_path = "res://.godot/imported/Obicne Lijane.png-3654453bb1d023805d0c804ed3279153.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jie3u"]
+size = Vector2(34.875, 36.5)
 
 [node name="Test" type="Node2D" groups=["level"]]
 script = ExtResource("1_vs01q")
@@ -162,7 +168,7 @@ image = ExtResource("23_o8yb6")
 letter = "m"
 
 [node name="CollisionShape2D" parent="Hint" index="1"]
-position = Vector2(-14.875, 6.5)
+position = Vector2(-14.5, 6.25)
 
 [node name="MLijane" type="Sprite2D" parent="."]
 visible = false
@@ -171,10 +177,24 @@ position = Vector2(880, 318)
 scale = Vector2(4, 4)
 texture = ExtResource("23_o8yb6")
 
+[node name="Hint2" parent="." instance=ExtResource("23_g3im6")]
+texture_filter = 3
+position = Vector2(108, 268)
+scale = Vector2(4, 4)
+image = SubResource("CompressedTexture2D_08rg2")
+letter = "v"
+
+[node name="CollisionShape2D" parent="Hint2" index="1"]
+position = Vector2(0.9375, -5)
+shape = SubResource("RectangleShape2D_jie3u")
+metadata/_edit_lock_ = true
+
 [node name="ObicneLijane" type="Sprite2D" parent="."]
+visible = false
 texture_filter = 3
 position = Vector2(108, 268)
 scale = Vector2(4, 4)
 texture = ExtResource("25_1wp7u")
 
 [editable path="Hint"]
+[editable path="Hint2"]

@@ -51,3 +51,4 @@ func handle_letter_pressed(index: int):
 
 func reset():
 	text = init_text
+	draw_text()

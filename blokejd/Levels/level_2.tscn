@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Levels/level_2.gd" id="1_uebjr"]
 [ext_resource type="TileSet" uid="uid://bcpa8ecnl6x1k" path="res://TileSets/tileset1.tres" id="3_1tixq"]
-[ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://karakter_test.tscn" id="3_p2taw"]
-[ext_resource type="PackedScene" uid="uid://u5ke56djwgur" path="res://words.tscn" id="5_b2aq3"]
+[ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://components/karakter_test.tscn" id="3_p2taw"]
+[ext_resource type="PackedScene" uid="uid://u5ke56djwgur" path="res://components/words.tscn" id="5_b2aq3"]
 [ext_resource type="Texture2D" uid="uid://i0vsqpr2xjn8" path="res://assets/walk/SIlent_Messenger_Walk_1.png" id="6_jl3nx"]
-[ext_resource type="PackedScene" uid="uid://cl7ls8hfg7qpg" path="res://hint.tscn" id="6_sig1j"]
+[ext_resource type="PackedScene" uid="uid://cl7ls8hfg7qpg" path="res://components/hint.tscn" id="6_sig1j"]
 [ext_resource type="Texture2D" uid="uid://parcptrowo5a" path="res://icon.svg" id="7_emqbv"]
 [ext_resource type="Texture2D" uid="uid://c5v1sbqvigiug" path="res://assets/vitez_grozdje/grozdje 1.png" id="8_47st5"]
 [ext_resource type="Texture2D" uid="uid://bldknpq72a7kb" path="res://assets/vitez_grozdje/grozdje 2.png" id="9_l06ae"]

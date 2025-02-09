@@ -18,7 +18,13 @@ func _ready() -> void:
 	#await DialogueManager.show_dialogue_balloon(TUTORIAL_DIAOG, "start")
 	#await DialogueManager.show_dialogue_balloon(PROLOUGE_DIAOG, "start")
 	#
-	
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("restart"):
+		var words = get_tree().get_nodes_in_group("word")
+		print_debug(words)
+		for word: Words in words:
+			word.reset()
 
 func on_hint_clicked(hint: Hint): 
 	Inventory.add_hint_to_inventory(hint.letter, hint.image)

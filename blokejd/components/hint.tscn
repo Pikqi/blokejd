@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://cl7ls8hfg7qpg"]
 
-[ext_resource type="Script" path="res://hint.gd" id="1_n4rce"]
+[ext_resource type="Script" path="res://components/hint.gd" id="1_n4rce"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ciq8"]
-size = Vector2(24.25, 36.5)
+size = Vector2(27.75, 36.5)
 
 [node name="Hint" type="StaticBody2D" groups=["hint"]]
 input_pickable = true
