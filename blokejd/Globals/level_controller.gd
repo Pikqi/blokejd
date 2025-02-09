@@ -5,15 +5,18 @@ const LEVEL_2 = preload("res://Levels/level_2.tscn")
 var PROLOUGE_DIAOG = load("res://dialogues/prologue.dialogue")
 var TUTORIAL_DIAOG = load("res://dialogues/tutorial.dialogue")
 var level1_DIALOG = load("res://dialogues/level1.dialogue")
+const PROLOUGE = preload("res://Levels/prolouge.tscn")
 
-var level = 1
+var scenes: Array[PackedScene] = [PROLOUGE, LEVEL_1, LEVEL_2]
+var level = 0
+@export var enable_dialogs = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#var dialogue_line = await PROLOUGE_DIAOG.get_next_dialogue_line("start")
 	#print_debug(dialogue_line)
 	if get_tree().get_nodes_in_group("level").size() < 1:
-		await TransitionRect.transition_to(LEVEL_1)
+		await TransitionRect.transition_to(scenes[0])
 	# ??? ORDER?
 	#await DialogueManager.show_dialogue_balloon(TUTORIAL_DIAOG, "start")
 	#await DialogueManager.show_dialogue_balloon(PROLOUGE_DIAOG, "start")
@@ -39,19 +42,9 @@ func _process(delta: float) -> void:
 	
 func handle_character_exited():
 	level += 1
-	match level:
-		1:
-			await TransitionRect.transition_to(LEVEL_1)
-			DialogueManager.show_dialogue_balloon(level1_DIALOG, "start")
-
-		2:
-			await TransitionRect.transition_to(LEVEL_2)
-			DialogueManager.show_dialogue_balloon(level1_DIALOG, "start")
-		_:
-			level = 1
-			TransitionRect.transition_to(LEVEL_1) 
-		#3:
-			#TransitionRect.transition_to(LEVEL_3)
+	if(level > scenes.size()):
+		return
+	TransitionRect.transition_to(scenes[level])
 	pass
 
 func new_scene():
@@ -61,4 +54,6 @@ func new_scene():
 	print_debug("hints: ", hints)
 	for hint:Hint in hints:
 		hint.hint_clicked.connect(on_hint_clicked.bind(hint))
-	(get_tree().get_first_node_in_group("word") as  Words).win.connect(level_passed)
+	var words =  (get_tree().get_first_node_in_group("word") as  Words)
+	if words is Words:
+		words.win.connect(level_passed)

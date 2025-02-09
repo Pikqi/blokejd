@@ -22,10 +22,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if(is_selected):
 		if $ColorRect != null:
-			$ColorRect.visible = false
+			$ColorRect.visible = true
 	else:
 		if $ColorRect != null:
-			$ColorRect.visible = true
+			$ColorRect.visible = false
 			
 
 func _on_gui_input(event: InputEvent) -> void:

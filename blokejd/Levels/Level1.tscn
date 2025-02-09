@@ -124,7 +124,7 @@ position = Vector2(165, 472)
 scale = Vector2(4, 4)
 
 [node name="Reci" parent="." instance=ExtResource("7_sd5qj")]
-position = Vector2(340, 102)
+position = Vector2(355, 155)
 init_text = "kost"
 wanted = "most"
 
@@ -139,6 +139,7 @@ sprite_frames = SubResource("SpriteFrames_tlr0c")
 animation = &"end_idle"
 autoplay = "idle"
 frame_progress = 0.565137
+metadata/_edit_lock_ = true
 
 [node name="DrvoDesno" type="Sprite2D" parent="."]
 texture_filter = 3
