@@ -8,7 +8,7 @@ var level = 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if get_tree().get_nodes_in_group("level").size() < 1:
-		TransitionRect.transition_to(LEVEL_2)
+		TransitionRect.transition_to(LEVEL_1)
 
 
 func on_hint_clicked(hint: Hint): 
@@ -16,7 +16,7 @@ func on_hint_clicked(hint: Hint):
 	get_tree().queue_delete(hint)
 	
 func level_passed():
-	(get_tree().get_first_node_in_group("character") as Character).start_walk()
+	(get_tree().get_first_node_in_group("level")).level_won()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -26,7 +26,7 @@ func handle_character_exited():
 	level += 1
 	match level:
 		1:
-			TransitionRect.transition_to(LEVEL_2)
+			TransitionRect.transition_to(LEVEL_1)
 		2:
 			TransitionRect.transition_to(LEVEL_2)
 		_:

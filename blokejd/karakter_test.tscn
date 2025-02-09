@@ -45,6 +45,7 @@ animations = [{
 }]
 
 [node name="Karakter" type="CharacterBody2D" groups=["character"]]
+z_index = 10
 script = ExtResource("1_yw2nf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

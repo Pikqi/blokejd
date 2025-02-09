@@ -5,7 +5,6 @@ var is_moving = false
 var exited = false
 signal character_exited
 
-
 func _physics_process(delta: float) -> void:
 	if is_moving:
 		global_position.x += SPEED * delta

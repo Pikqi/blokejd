@@ -1,0 +1,36 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bcpa8ecnl6x1k"]
+
+[ext_resource type="Texture2D" uid="uid://cbgmghc1xkvj4" path="res://assets/GameJamTilesett.webp" id="1_x6md8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkn45"]
+texture = ExtResource("1_x6md8")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+
+[resource]
+sources/1 = SubResource("TileSetAtlasSource_vkn45")

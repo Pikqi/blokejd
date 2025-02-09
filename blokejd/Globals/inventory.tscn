@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://tqdnox3ourwk"]
 
-[ext_resource type="Script" path="res://inventory.gd" id="1_7x2vi"]
+[ext_resource type="Script" path="res://Globals/inventory.gd" id="1_7x2vi"]
 [ext_resource type="PackedScene" uid="uid://bwnn7o8busxhx" path="res://invetory_hint.tscn" id="2_eym70"]
 
 [node name="Inventory" type="CanvasLayer"]
