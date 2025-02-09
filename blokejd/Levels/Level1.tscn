@@ -480,4 +480,4 @@ scale = Vector2(2.99211, 2.96388)
 sprite_frames = SubResource("SpriteFrames_tlr0c")
 animation = &"end_idle"
 autoplay = "idle"
-frame_progress = 0.515179
+frame_progress = 0.565137

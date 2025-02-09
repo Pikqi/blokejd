@@ -5,10 +5,6 @@ extends ColorRect
 
 # Reference to the _AnimationPlayer_ node
 @onready var _anim_player := $Fade
-
-
-func _ready() -> void:
-	$Fade.play_backwards("new_animation")
 	
 func transition_to(_next_scene := next_scene_path) -> void:
 	# Plays the Fade animation and wait until it finishes
