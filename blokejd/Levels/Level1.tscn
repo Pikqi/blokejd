@@ -1,7 +1,8 @@
-[gd_scene load_steps=29 format=4 uid="uid://d0nfl3labvb3k"]
+[gd_scene load_steps=30 format=4 uid="uid://d0nfl3labvb3k"]
 
 [ext_resource type="Texture2D" uid="uid://bsk7iar7m1eji" path="res://assets/Background_Level_1.png" id="2_0wndg"]
 [ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://components/karakter_test.tscn" id="3_1hvn3"]
+[ext_resource type="Texture2D" uid="uid://6ecyseoejspq" path="res://assets/dialog_box.png" id="4_yamdn"]
 [ext_resource type="Texture2D" uid="uid://cqou6whkd7us5" path="res://assets/Vulture_Idle/Vulture_Idle_1.png" id="7_58ef2"]
 [ext_resource type="PackedScene" uid="uid://u5ke56djwgur" path="res://components/words.tscn" id="7_sd5qj"]
 [ext_resource type="Texture2D" uid="uid://bfpeto8xvc2vq" path="res://assets/Vulture_end/Vulture_End_Animation_1.png" id="7_utelg"]
@@ -143,6 +144,20 @@ tile_set = ExtResource("8_pfuxe")
 [node name="Karakter" parent="." instance=ExtResource("3_1hvn3")]
 position = Vector2(165, 472)
 scale = Vector2(4, 4)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+texture_filter = 3
+offset_left = 319.0
+offset_top = 130.0
+offset_right = 376.82
+offset_bottom = 152.89
+scale = Vector2(4, 4)
+texture = ExtResource("4_yamdn")
+region_rect = Rect2(10, 14, 56, 20)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 2
+patch_margin_bottom = 7
 
 [node name="Reci" parent="." instance=ExtResource("7_sd5qj")]
 position = Vector2(355, 155)

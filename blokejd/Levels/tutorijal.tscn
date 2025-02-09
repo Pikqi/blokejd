@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dpheyo8ks032w"]
+[gd_scene load_steps=13 format=3 uid="uid://dpheyo8ks032w"]
 
 [ext_resource type="Script" path="res://Levels/tutorijal.gd" id="1_6601j"]
 [ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://components/karakter_test.tscn" id="1_e1e3i"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://mpumeuu2tkgd" path="res://assets/tutorial/lamp_post.png" id="7_bejml"]
 [ext_resource type="Script" path="res://Levels/words_2.gd" id="8_rhreb"]
 [ext_resource type="TileSet" uid="uid://curloulfinxeg" path="res://TileSets/lettersTileset.tres" id="9_1tixa"]
+[ext_resource type="Texture2D" uid="uid://6ecyseoejspq" path="res://assets/dialog_box.png" id="10_paeg0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ndpf0"]
 size = Vector2(20, 208)
@@ -17,7 +18,7 @@ size = Vector2(20, 208)
 radius = 35.0
 
 [node name="Tutorijal" type="Node2D" groups=["level"]]
-position = Vector2(0, -104)
+position = Vector2(-2, -104)
 script = ExtResource("1_6601j")
 
 [node name="Karakter" parent="." instance=ExtResource("1_e1e3i")]
@@ -97,6 +98,20 @@ shape = SubResource("CircleShape2D_pdla2")
 z_index = 200
 position = Vector2(747, 201)
 script = ExtResource("8_rhreb")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Words2"]
+texture_filter = 3
+offset_left = -36.0
+offset_top = -25.0
+offset_right = 85.46
+offset_bottom = -2.11
+scale = Vector2(4, 4)
+texture = ExtResource("10_paeg0")
+region_rect = Rect2(10, 14, 56, 20)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 2
+patch_margin_bottom = 7
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Words2"]
 texture_filter = 3
