@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://hint.gd" id="1_n4rce"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ciq8"]
-size = Vector2(125, 127)
+size = Vector2(24.25, 36.5)
 
 [node name="Hint" type="StaticBody2D" groups=["hint"]]
 input_pickable = true

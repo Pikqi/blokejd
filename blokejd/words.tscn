@@ -1,48 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://u5ke56djwgur"]
+[gd_scene load_steps=3 format=3 uid="uid://u5ke56djwgur"]
 
 [ext_resource type="Script" path="res://words.gd" id="1_upbqn"]
-[ext_resource type="Texture2D" uid="uid://dkgc04kko4lkh" path="res://assets/Game_Font.png" id="2_w4rih"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pd7yp"]
-texture = ExtResource("2_w4rih")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-8:0/0 = 0
-9:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-9:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-8:2/0 = 0
-9:2/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_22qk6"]
-sources/0 = SubResource("TileSetAtlasSource_pd7yp")
+[ext_resource type="TileSet" uid="uid://curloulfinxeg" path="res://TileSets/lettersTileset.tres" id="2_3lcb8"]
 
 [node name="Words" type="Node2D" groups=["word"]]
 z_index = 200
 script = ExtResource("1_upbqn")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+texture_filter = 3
 scale = Vector2(3, 3)
-tile_set = SubResource("TileSet_22qk6")
+tile_set = ExtResource("2_3lcb8")

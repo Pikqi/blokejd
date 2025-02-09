@@ -58,3 +58,4 @@ letter = "M"
 [node name="InvetoryButton2" parent="MarginContainer/HBoxContainer" instance=ExtResource("2_eym70")]
 visible = false
 layout_mode = 2
+letter = ""

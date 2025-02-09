@@ -20,4 +20,5 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if(event.is_action_pressed("mouse_1")):
 		print_debug("lala")
 		hint_clicked.emit()
+		visible = false
 		

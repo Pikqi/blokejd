@@ -162,9 +162,10 @@ image = ExtResource("23_o8yb6")
 letter = "m"
 
 [node name="CollisionShape2D" parent="Hint" index="1"]
-position = Vector2(-14.75, 6.875)
+position = Vector2(-14.875, 6.5)
 
 [node name="MLijane" type="Sprite2D" parent="."]
+visible = false
 texture_filter = 3
 position = Vector2(880, 318)
 scale = Vector2(4, 4)

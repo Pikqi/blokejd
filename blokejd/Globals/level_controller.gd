@@ -15,9 +15,9 @@ func _ready() -> void:
 	if get_tree().get_nodes_in_group("level").size() < 1:
 		await TransitionRect.transition_to(LEVEL_1)
 	# ??? ORDER?
-	await DialogueManager.show_dialogue_balloon(TUTORIAL_DIAOG, "start")
-	await DialogueManager.show_dialogue_balloon(PROLOUGE_DIAOG, "start")
-	
+	#await DialogueManager.show_dialogue_balloon(TUTORIAL_DIAOG, "start")
+	#await DialogueManager.show_dialogue_balloon(PROLOUGE_DIAOG, "start")
+	#
 	
 
 func on_hint_clicked(hint: Hint): 

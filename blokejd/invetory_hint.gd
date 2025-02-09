@@ -1,15 +1,23 @@
 extends TextureRect
 class_name InventoryHint
-
 var is_selected = false
 @export var letter: String
-
+@export var texture3: Texture2D
+const LETTERS_TILESET = preload("res://TileSets/lettersTileset.tres")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Label.text = letter
-	pass # Replace with function body.
-
-
+	var ascii = letter.unicode_at(0) - "a".unicode_at(0)
+	var row = ascii / 10
+	var col = ascii % 10
+	
+	var a = LETTERS_TILESET.get_source(0) as TileSetAtlasSource
+	var im := a.texture.get_image() as Image
+	var image = im.get_region(a.get_tile_texture_region(Vector2(col, row)))
+	var image_texture = ImageTexture.create_from_image(image)
+	
+	texture = image_texture
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if(is_selected):
