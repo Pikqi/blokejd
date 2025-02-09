@@ -67,6 +67,7 @@ theme_override_constants/separation = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="InvetoryButton" parent="MarginContainer/HBoxContainer" instance=ExtResource("2_eym70")]
+visible = false
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 texture = ExtResource("3_hfd21")

@@ -2,7 +2,6 @@ extends TextureRect
 class_name InventoryHint
 var is_selected = false
 @export var letter: String
-@export var texture3: Texture2D
 const LETTERS_TILESET = preload("res://TileSets/lettersTileset.tres")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

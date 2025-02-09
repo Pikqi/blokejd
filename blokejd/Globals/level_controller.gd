@@ -2,12 +2,9 @@ extends Node2D
 
 const LEVEL_1 = preload("res://Levels/Level1.tscn")
 const LEVEL_2 = preload("res://Levels/level_2.tscn")
-var PROLOUGE_DIAOG = load("res://dialogues/prologue.dialogue")
-var TUTORIAL_DIAOG = load("res://dialogues/tutorial.dialogue")
-var level1_DIALOG = load("res://dialogues/level1.dialogue")
 const PROLOUGE = preload("res://Levels/prolouge.tscn")
-
-var scenes: Array[PackedScene] = [PROLOUGE, LEVEL_1, LEVEL_2]
+const TUTORIJAL = preload("res://Levels/tutorijal.tscn")
+var scenes: Array[PackedScene] = [PROLOUGE, TUTORIJAL, LEVEL_1, LEVEL_2]
 var level = 0
 @export var enable_dialogs = true
 

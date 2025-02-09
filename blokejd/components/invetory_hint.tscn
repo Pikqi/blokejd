@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://components/invetory_hint.gd" id="2_aslvm"]
 
 [node name="InvetoryHint" type="TextureRect" groups=["inventory_hint"]]
+z_index = 500
 texture_filter = 3
 texture = ExtResource("1_ue5ao")
 expand_mode = 3

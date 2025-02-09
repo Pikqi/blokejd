@@ -14,9 +14,10 @@ func _process(delta: float) -> void:
 
 func add_hint_to_inventory(name: String, image: Texture2D):
 	var t = INVETORY_HINT.instantiate()
-	t.texture = image
+	print_debug(image)
+	#t.texture = image
 	t.letter = name
-	print_debug(name)
+	#print_debug(t.texture)
 	%HBoxContainer.add_child(t)
 	var hints = get_tree().get_nodes_in_group("inventory_hint")
 	for hint: InventoryHint in hints:
