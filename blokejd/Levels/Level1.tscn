@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://d0nfl3labvb3k"]
+[gd_scene load_steps=25 format=4 uid="uid://d0nfl3labvb3k"]
 
 [ext_resource type="Script" path="res://Levels/Level1.gd" id="1_vs01q"]
 [ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://karakter_test.tscn" id="3_1hvn3"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://dkp6jm1uqhnh2" path="res://assets/Vulture_end/Vulture_End_Animation_7.png" id="13_lepf2"]
 [ext_resource type="Texture2D" uid="uid://bbtbbe4208vh8" path="res://assets/Vulture_end/Vulture_End_Animation_8.png" id="14_qtkpk"]
 [ext_resource type="Texture2D" uid="uid://bli4xw0hnumkm" path="res://assets/Vulture_end/Vulture_End_Animation_9.png" id="15_1bd5m"]
+[ext_resource type="Texture2D" uid="uid://cb4s2kude6g3e" path="res://assets/Vulture_end/Vulture_End_Animation_10.png" id="16_khmdb"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j072r"]
 load_path = "res://.godot/imported/Assets.png-8ff8aa10870b6dc291ba061aea56a22b.ctex"
@@ -400,13 +401,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 2.0,
-"texture": ExtResource("13_lepf2")
-}, {
-"duration": 1.0,
 "texture": ExtResource("14_qtkpk")
 }, {
 "duration": 1.0,
 "texture": ExtResource("15_1bd5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_khmdb")
 }],
 "loop": true,
 "name": &"end_idle",
@@ -477,7 +478,6 @@ texture_filter = 3
 position = Vector2(557, 327)
 scale = Vector2(2.99211, 2.96388)
 sprite_frames = SubResource("SpriteFrames_tlr0c")
-animation = &"end"
+animation = &"end_idle"
 autoplay = "idle"
-frame = 8
-frame_progress = 1.0
+frame_progress = 0.515179
