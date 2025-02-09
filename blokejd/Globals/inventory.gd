@@ -17,16 +17,16 @@ func add_hint_to_inventory(name: String, image: Texture2D):
 	t.texture = image
 	t.letter = name
 	print_debug(name)
-	$HBoxContainer.add_child(t)
+	%HBoxContainer.add_child(t)
 	var hints = get_tree().get_nodes_in_group("inventory_hint")
 	for hint: InventoryHint in hints:
 		hint.is_selected = false
 	t.is_selected = true
 
 func reset():
-	for childd in $HBoxContainer.get_children():
-		$HBoxContainer.remove_child(childd)
+	for childd in %HBoxContainer.get_children():
+		%HBoxContainer.remove_child(childd)
 func get_selected_letter():
-	for childd: InventoryHint in $HBoxContainer.get_children():
+	for childd: InventoryHint in %HBoxContainer.get_children():
 		if childd.is_selected:
 			return childd.letter
