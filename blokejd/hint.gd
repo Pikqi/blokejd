@@ -15,6 +15,8 @@ func _process(delta: float) -> void:
 	pass
 	
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	print_debug("v")
+	
 	if(event.is_action_pressed("mouse_1")):
 		print_debug("lala")
 		hint_clicked.emit()

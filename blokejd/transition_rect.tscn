@@ -40,7 +40,6 @@ _data = {
 }
 
 [node name="TransitionRect" type="ColorRect"]
-z_index = -490
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

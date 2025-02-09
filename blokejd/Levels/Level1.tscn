@@ -692,7 +692,7 @@ texture = ExtResource("2_lnayi")
 [sub_resource type="TileSet" id="TileSet_yyqem"]
 sources/0 = SubResource("TileSetAtlasSource_34kq3")
 
-[node name="Test" type="Node2D"]
+[node name="Test" type="Node2D" groups=["level"]]
 script = ExtResource("1_vs01q")
 
 [node name="Background" type="TileMapLayer" parent="."]
@@ -709,27 +709,23 @@ tile_set = SubResource("TileSet_yyqem")
 position = Vector2(91, 433)
 scale = Vector2(4.68, 4.68)
 
-[node name="Hint" parent="." groups=["hint"] instance=ExtResource("4_n7arl")]
+[node name="Hint" parent="." instance=ExtResource("4_n7arl")]
 position = Vector2(751, 292)
-input_pickable = true
 image = ExtResource("5_ydsqf")
 letter = "A"
 
-[node name="Hint2" parent="." groups=["hint"] instance=ExtResource("4_n7arl")]
+[node name="Hint2" parent="." instance=ExtResource("4_n7arl")]
 position = Vector2(435, 430)
-input_pickable = true
 image = ExtResource("5_ydsqf")
 letter = "B"
 
-[node name="Hint3" parent="." groups=["hint"] instance=ExtResource("4_n7arl")]
+[node name="Hint3" parent="." instance=ExtResource("4_n7arl")]
 position = Vector2(920, 335)
-input_pickable = true
 image = ExtResource("5_ydsqf")
 letter = "c"
 
-[node name="Hint4" parent="." groups=["hint"] instance=ExtResource("4_n7arl")]
+[node name="Hint4" parent="." instance=ExtResource("4_n7arl")]
 position = Vector2(299, 256)
-input_pickable = true
 image = ExtResource("5_ydsqf")
 
 [node name="Reci" parent="." instance=ExtResource("7_sd5qj")]

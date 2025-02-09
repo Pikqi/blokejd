@@ -35,7 +35,7 @@ func _process(delta: float) -> void:
 func handle_letter_pressed(index: int):
 	var selected_letter = Inventory.get_selected_letter()
 	if(selected_letter == null or selected_letter == ""):
-		pass
+		return
 		
 	var ascii = selected_letter.to_lower().unicode_at(0) - "a".unicode_at(0)
 	var row = ascii / width
