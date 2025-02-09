@@ -28,6 +28,8 @@ runtime/balloon_path="res://dialogues/balloon.tscn"
 
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/size/resizable=false
 
 [editor_plugins]
@@ -44,7 +46,7 @@ level=""
 
 [gui]
 
-theme/custom_font="res://assets/04b_30/04B_30__.TTF"
+theme/custom_font="res://assets/fonts/Minecraftia-Regular.ttf"
 
 [input]
 

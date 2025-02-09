@@ -9,4 +9,6 @@ func _process(delta: float) -> void:
 	pass
 	
 func level_won():
+	$Goblin/AnimatedSprite2D.play("end")
+	await $Goblin/AnimatedSprite2D.animation_finished
 	$Karakter.start_walk()
