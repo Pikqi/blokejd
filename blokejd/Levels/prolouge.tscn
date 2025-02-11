@@ -48,4 +48,4 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_akwna")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.231474
+frame_progress = 0.0818738

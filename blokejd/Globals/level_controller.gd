@@ -4,7 +4,7 @@ const LEVEL_1 = preload("res://Levels/Level1.tscn")
 const LEVEL_2 = preload("res://Levels/level_2.tscn")
 const PROLOUGE = preload("res://Levels/prolouge.tscn")
 const TUTORIJAL = preload("res://Levels/tutorijal.tscn")
-var scenes: Array[PackedScene] = [PROLOUGE, TUTORIJAL, LEVEL_1, LEVEL_2]
+var scenes: Array[PackedScene] = [PROLOUGE,TUTORIJAL, LEVEL_1, LEVEL_2]
 var level = 0
 @export var enable_dialogs = true
 

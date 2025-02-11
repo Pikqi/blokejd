@@ -177,7 +177,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("47_dvf8t")
 }],
-"loop": true,
+"loop": false,
 "name": &"end",
 "speed": 7.0
 }, {
@@ -204,6 +204,7 @@ position = Vector2(0, -3)
 script = ExtResource("1_uebjr")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 3
 offset_right = 320.0
 offset_bottom = 180.0
 scale = Vector2(4.00356, 4.01477)
