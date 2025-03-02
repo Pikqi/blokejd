@@ -10,14 +10,18 @@ var level = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Inventory.visible = false;
 	#var dialogue_line = await PROLOUGE_DIAOG.get_next_dialogue_line("start")
 	#print_debug(dialogue_line)
-	if get_tree().get_nodes_in_group("level").size() < 1:
-		await TransitionRect.transition_to(scenes[0])
 	# ??? ORDER?
 	#await DialogueManager.show_dialogue_balloon(TUTORIAL_DIAOG, "start")
 	#await DialogueManager.show_dialogue_balloon(PROLOUGE_DIAOG, "start")
 	#
+
+func start_game():
+	await TransitionRect.transition_to(scenes[0])
+	Inventory.visible = true
+
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("restart"):

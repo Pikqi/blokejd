@@ -118,7 +118,7 @@ load_path = "res://.godot/imported/Obicne Lijane.png-3654453bb1d023805d0c804ed32
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jie3u"]
 size = Vector2(34.875, 36.5)
 
-[node name="Test" type="Node2D" groups=["level"]]
+[node name="Level1" type="Node2D" groups=["level"]]
 script = SubResource("GDScript_ktprr")
 
 [node name="Background" type="TextureRect" parent="."]
