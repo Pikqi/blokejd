@@ -7,6 +7,7 @@ class_name Words_2
 @onready var text = init_text
 
 signal win 
+var won = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,9 +19,11 @@ func _input(event: InputEvent) -> void:
 		if letter != null and letter.to_lower() == "o":
 			text = "otvoreno"
 			draw_text()
+			won = true
 			win.emit() 
 
 func draw_text():
+	$TileMapLayer.clear()
 	var i = 0
 	for char in text:
 		var ascii = char.unicode_at(0) - "a".unicode_at(0)
@@ -34,5 +37,7 @@ func _process(delta: float) -> void:
 	pass
 
 func reset():
+	if won:
+		return
 	text = init_text
 	draw_text()

@@ -273,7 +273,14 @@ autoplay = "idle"
 letter = "v"
 
 [node name="CollisionShape2D" parent="Hint" index="1"]
-position = Vector2(172, 75)
+position = Vector2(169.5, 78)
+
+[node name="Hint4" parent="." instance=ExtResource("6_sig1j")]
+position = Vector2(1017, -19)
+letter = "v"
+
+[node name="CollisionShape2D" parent="Hint4" index="1"]
+position = Vector2(104, 44)
 
 [node name="Hint2" parent="." instance=ExtResource("6_sig1j")]
 letter = "v"
@@ -283,4 +290,5 @@ position = Vector2(104, 44)
 
 [editable path="Hint3"]
 [editable path="Hint"]
+[editable path="Hint4"]
 [editable path="Hint2"]
