@@ -1,4 +1,4 @@
-extends Node2D
+extends Level
 class_name Words_2
 
 @export var init_text: String = "zatvoreno"
@@ -12,15 +12,19 @@ var won = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	draw_text()
+	super()
 	
 func _input(event: InputEvent) -> void:
 	if(event.is_action_pressed("mouse_1")):
-		var letter = Inventory.get_selected_letter() 
-		if letter != null and letter.to_lower() == "o":
-			text = "otvoreno"
-			draw_text()
-			won = true
-			win.emit() 
+		var r = $TileMapLayer.local_to_map(get_local_mouse_position() / $TileMapLayer.scale )
+		if(r.x >= 0 and r.x <= 1 and r.y == 0):
+			var letter = Inventory.get_selected_letter() 
+			if letter != null and letter.to_lower() == "o":
+				text = "otvoreno"
+				draw_text()
+				won = true
+				win.emit() 
+		
 
 func draw_text():
 	$TileMapLayer.clear()

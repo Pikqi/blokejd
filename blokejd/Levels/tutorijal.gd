@@ -3,6 +3,7 @@ extends Node2D
 const O = preload("res://assets/O.png")
 const TUTORIAL = preload("res://dialogues/tutorial.dialogue")
 # Called when the node enters the scene tree for the first time.
+var hint_added = false
 func _ready() -> void:
 	LevelController.new_scene()
 	$Words2.win.connect(level_won)
@@ -30,5 +31,6 @@ func level_won():
 		$Karakter.is_moving = true
 
 func _on_hint_hack_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event.is_action_pressed("mouse_1"):
+	if event.is_action_pressed("mouse_1") and not hint_added:
+		hint_added = true
 		Inventory.add_hint_to_inventory("o", null)
