@@ -8,6 +8,7 @@ class_name Words
 @onready var text = init_text
 
 signal win 
+var won = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -47,8 +48,11 @@ func handle_letter_pressed(index: int):
 	
 	if(text == wanted):
 		win.emit()
+		won = true
 		print_debug("win")
 
 func reset():
+	if won:
+		return
 	text = init_text
 	draw_text()

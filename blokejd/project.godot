@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Blokejd"
-run/main_scene="res://root.tscn"
+run/main_scene="res://menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -44,6 +44,7 @@ inventory_hint=""
 character=""
 word=""
 level=""
+menu=""
 
 [gui]
 

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c3admpbl5x5bl" path="res://assets/menu/Button_Click.png" id="3_qy7ss"]
 [ext_resource type="Texture2D" uid="uid://by06fak1xea8j" path="res://assets/menu/Button_Hover.png" id="4_mdhka"]
 
-[node name="Menu" type="Control"]
+[node name="Menu" type="Control" groups=["menu"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
