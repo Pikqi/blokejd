@@ -143,7 +143,7 @@ tile_map_data = PackedByteArray("AAAAAAgAAAABAAAAAAABAAgAAAABAAAAAAACAAgAAAABAAA
 tile_set = ExtResource("8_pfuxe")
 
 [node name="Karakter" parent="." instance=ExtResource("3_1hvn3")]
-position = Vector2(165, 472)
+position = Vector2(165, 473)
 scale = Vector2(4, 4)
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
@@ -170,13 +170,12 @@ position = Vector2(-4, 34)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Vulture"]
 texture_filter = 3
-position = Vector2(556, 276)
+position = Vector2(556, 277)
 scale = Vector2(4, 3.963)
 sprite_frames = SubResource("SpriteFrames_tlr0c")
 animation = &"end_idle"
 autoplay = "idle"
 frame_progress = 0.565137
-metadata/_edit_lock_ = true
 
 [node name="DrvoDesno" type="Sprite2D" parent="."]
 texture_filter = 3
@@ -187,10 +186,9 @@ metadata/_edit_lock_ = true
 
 [node name="DrvoLevo" type="Sprite2D" parent="."]
 texture_filter = 3
-position = Vector2(192, 256)
+position = Vector2(192, 257)
 scale = Vector2(4, 4)
 texture = ExtResource("21_v6kvm")
-metadata/_edit_lock_ = true
 
 [node name="DrvoSaMLijanom" type="Sprite2D" parent="."]
 texture_filter = 3
@@ -230,7 +228,7 @@ metadata/_edit_lock_ = true
 [node name="ObicneLijane" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 3
-position = Vector2(108, 268)
+position = Vector2(108, 269)
 scale = Vector2(4, 4)
 texture = ExtResource("25_1wp7u")
 
