@@ -1,0 +1,238 @@
+[gd_scene load_steps=30 format=4 uid="uid://d0nfl3labvb3k"]
+
+[ext_resource type="Texture2D" uid="uid://bsk7iar7m1eji" path="res://assets/Background_Level_1.png" id="2_0wndg"]
+[ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://components/karakter_test.tscn" id="3_1hvn3"]
+[ext_resource type="Texture2D" uid="uid://6ecyseoejspq" path="res://assets/dialog_box.png" id="4_yamdn"]
+[ext_resource type="Texture2D" uid="uid://cqou6whkd7us5" path="res://assets/Vulture_Idle/Vulture_Idle_1.png" id="7_58ef2"]
+[ext_resource type="PackedScene" uid="uid://u5ke56djwgur" path="res://components/words.tscn" id="7_sd5qj"]
+[ext_resource type="Texture2D" uid="uid://bfpeto8xvc2vq" path="res://assets/Vulture_end/Vulture_End_Animation_1.png" id="7_utelg"]
+[ext_resource type="Texture2D" uid="uid://8xm1ko1165a8" path="res://assets/Vulture_end/Vulture_End_Animation_2.png" id="8_k7e24"]
+[ext_resource type="TileSet" uid="uid://bcpa8ecnl6x1k" path="res://TileSets/tileset1.tres" id="8_pfuxe"]
+[ext_resource type="Texture2D" uid="uid://ccodupll6o2tj" path="res://assets/Vulture_Idle/Vulture_Idle_2.png" id="8_ypqxv"]
+[ext_resource type="Texture2D" uid="uid://bt5ijeqeq6jkr" path="res://assets/Vulture_end/Vulture_End_Animation_3.png" id="9_gr0cv"]
+[ext_resource type="Texture2D" uid="uid://df485iplu1d3b" path="res://assets/Vulture_Idle/Vulture_Idle_3.png" id="9_sw7bk"]
+[ext_resource type="Texture2D" uid="uid://dq6viagwo1gp4" path="res://assets/Vulture_Idle/Vulture_Idle_4.png" id="10_cvkp3"]
+[ext_resource type="Texture2D" uid="uid://une6jfxwxyr0" path="res://assets/Vulture_end/Vulture_End_Animation_4.png" id="10_wi23v"]
+[ext_resource type="Texture2D" uid="uid://bae31od54x73t" path="res://assets/Vulture_end/Vulture_End_Animation_5.png" id="11_e66iu"]
+[ext_resource type="Texture2D" uid="uid://bdga3vwi6lvle" path="res://assets/Vulture_end/Vulture_End_Animation_6.png" id="12_mwrf7"]
+[ext_resource type="Texture2D" uid="uid://dkp6jm1uqhnh2" path="res://assets/Vulture_end/Vulture_End_Animation_7.png" id="13_lepf2"]
+[ext_resource type="Texture2D" uid="uid://bbtbbe4208vh8" path="res://assets/Vulture_end/Vulture_End_Animation_8.png" id="14_qtkpk"]
+[ext_resource type="Texture2D" uid="uid://bli4xw0hnumkm" path="res://assets/Vulture_end/Vulture_End_Animation_9.png" id="15_1bd5m"]
+[ext_resource type="Texture2D" uid="uid://cb4s2kude6g3e" path="res://assets/Vulture_end/Vulture_End_Animation_10.png" id="16_khmdb"]
+[ext_resource type="Texture2D" uid="uid://db0uwco1m5n8b" path="res://assets/level1/Drvo Desno.png" id="20_rdg17"]
+[ext_resource type="Texture2D" uid="uid://er1d7wwx2fqr" path="res://assets/level1/Drvo Levo.png" id="21_v6kvm"]
+[ext_resource type="Texture2D" uid="uid://c32tltb3pbwy5" path="res://assets/level1/Drvo sa M Lijanom.png" id="22_fwcg4"]
+[ext_resource type="PackedScene" uid="uid://cl7ls8hfg7qpg" path="res://components/hint.tscn" id="23_g3im6"]
+[ext_resource type="Texture2D" uid="uid://lxt605n8qt3f" path="res://assets/level1/M Lijane.png" id="23_o8yb6"]
+[ext_resource type="Texture2D" uid="uid://bxmsiwtxpojsw" path="res://assets/level1/Obicne Lijane.png" id="25_1wp7u"]
+
+[sub_resource type="GDScript" id="GDScript_ktprr"]
+script/source = "extends Level
+const LEVEL_1 = preload(\"res://dialogues/level1.dialogue\")
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	LevelController.new_scene()
+	DialogueManager.show_dialogue_balloon(LEVEL_1)
+	super()
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+func level_won():
+	$Vulture/AnimatedSprite2D.play(\"end\")
+	await $Vulture/AnimatedSprite2D.animation_finished
+	$Vulture/AnimatedSprite2D.play(\"end_idle\")
+	$Karakter.start_walk()
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tlr0c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_utelg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_k7e24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gr0cv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wi23v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_e66iu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mwrf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_lepf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qtkpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1bd5m")
+}],
+"loop": false,
+"name": &"end",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("14_qtkpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1bd5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_khmdb")
+}],
+"loop": true,
+"name": &"end_idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_58ef2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ypqxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sw7bk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cvkp3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_08rg2"]
+load_path = "res://.godot/imported/Obicne Lijane.png-3654453bb1d023805d0c804ed3279153.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jie3u"]
+size = Vector2(34.875, 36.5)
+
+[node name="Level1" type="Node2D" groups=["level"]]
+script = SubResource("GDScript_ktprr")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -1
+texture_filter = 3
+custom_minimum_size = Vector2(1280, 720)
+offset_right = 1280.0
+offset_bottom = 720.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_0wndg")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Level" type="TileMapLayer" parent="."]
+z_index = 1
+texture_filter = 3
+position = Vector2(0, 1)
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAAAAgAAAABAAAAAAABAAgAAAABAAAAAAACAAgAAAABAAAAAAADAAgAAAABAAAAAAAEAAgAAAABAAAAAAAFAAgAAAABAAAAAAAGAAgAAAABAAAAAAAHAAgAAAABAAAAAAAIAAgAAAACAAAAAAAMAAgAAAABAAAAAAANAAgAAAABAAAAAAAOAAgAAAABAAAAAAAPAAgAAAABAAAAAAAQAAgAAAABAAAAAAARAAgAAAABAAAAAAASAAgAAAABAAAAAAATAAgAAAABAAAAAAAAAAkAAAABAAEAAAAAAAoAAAABAAEAAAABAAkAAAABAAEAAAABAAoAAAABAAEAAAACAAkAAAABAAEAAAACAAoAAAABAAEAAAADAAkAAAABAAEAAAADAAoAAAABAAEAAAAEAAkAAAABAAEAAAAEAAoAAAABAAEAAAAFAAkAAAABAAEAAAAFAAoAAAABAAEAAAAGAAkAAAABAAEAAAAGAAoAAAABAAEAAAAHAAkAAAABAAEAAAAHAAoAAAABAAEAAAAIAAkAAAACAAEAAAAIAAoAAAACAAEAAAAMAAkAAAABAAEAAAAMAAoAAAABAAEAAAANAAkAAAABAAEAAAANAAoAAAABAAEAAAAOAAkAAAABAAEAAAAOAAoAAAABAAEAAAAPAAkAAAABAAEAAAAPAAoAAAABAAEAAAAQAAkAAAABAAEAAAAQAAoAAAABAAEAAAARAAkAAAABAAEAAAARAAoAAAABAAEAAAASAAkAAAABAAEAAAASAAoAAAABAAEAAAATAAkAAAABAAEAAAATAAoAAAABAAEAAAAAAAsAAAABAAEAAAABAAsAAAABAAEAAAACAAsAAAABAAEAAAADAAsAAAABAAEAAAAEAAsAAAABAAEAAAAFAAsAAAABAAEAAAAGAAsAAAABAAEAAAAHAAsAAAABAAEAAAAIAAsAAAACAAEAAAAMAAsAAAABAAEAAAANAAsAAAABAAEAAAAOAAsAAAABAAEAAAAPAAsAAAABAAEAAAAQAAsAAAABAAEAAAARAAsAAAABAAEAAAASAAsAAAABAAEAAAATAAsAAAABAAEAAAALAAgAAAAAAAAAAAALAAkAAAAAAAEAAAALAAoAAAAAAAEAAAALAAsAAAAAAAEAAAAGAAcAAAAAAAQAAAAEAAcAAAAEAAQAAAAPAAcAAAAEAAMAAAADAAcAAAADAAEAAAAQAAcAAAAEAAQAAAASAAcAAAAEAAEAAAAAAAcAAAAEAAMAAAAQAAAAAAAFAAEAAAA=")
+tile_set = ExtResource("8_pfuxe")
+
+[node name="Karakter" parent="." instance=ExtResource("3_1hvn3")]
+position = Vector2(165, 472)
+scale = Vector2(4, 4)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+texture_filter = 3
+offset_left = 319.0
+offset_top = 130.0
+offset_right = 376.82
+offset_bottom = 152.89
+scale = Vector2(4, 4)
+texture = ExtResource("4_yamdn")
+region_rect = Rect2(10, 14, 56, 20)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 2
+patch_margin_bottom = 7
+
+[node name="Reci" parent="." instance=ExtResource("7_sd5qj")]
+position = Vector2(355, 155)
+init_text = "kost"
+wanted = "most"
+
+[node name="Vulture" type="Node2D" parent="."]
+position = Vector2(-4, 34)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Vulture"]
+texture_filter = 3
+position = Vector2(556, 276)
+scale = Vector2(4, 3.963)
+sprite_frames = SubResource("SpriteFrames_tlr0c")
+animation = &"end_idle"
+autoplay = "idle"
+frame_progress = 0.565137
+metadata/_edit_lock_ = true
+
+[node name="DrvoDesno" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(1094, 257)
+scale = Vector2(4, 4)
+texture = ExtResource("20_rdg17")
+metadata/_edit_lock_ = true
+
+[node name="DrvoLevo" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(192, 256)
+scale = Vector2(4, 4)
+texture = ExtResource("21_v6kvm")
+metadata/_edit_lock_ = true
+
+[node name="DrvoSaMLijanom" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(886, 322)
+scale = Vector2(4, 4)
+texture = ExtResource("22_fwcg4")
+
+[node name="Hint" parent="." instance=ExtResource("23_g3im6")]
+texture_filter = 3
+position = Vector2(880, 318)
+scale = Vector2(4, 4)
+image = ExtResource("23_o8yb6")
+letter = "m"
+
+[node name="CollisionShape2D" parent="Hint" index="1"]
+position = Vector2(-14.5, 6.25)
+
+[node name="MLijane" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 3
+position = Vector2(880, 318)
+scale = Vector2(4, 4)
+texture = ExtResource("23_o8yb6")
+
+[node name="Hint2" parent="." instance=ExtResource("23_g3im6")]
+texture_filter = 3
+position = Vector2(108, 268)
+scale = Vector2(4, 4)
+image = SubResource("CompressedTexture2D_08rg2")
+letter = "v"
+
+[node name="CollisionShape2D" parent="Hint2" index="1"]
+position = Vector2(0.9375, -5)
+shape = SubResource("RectangleShape2D_jie3u")
+metadata/_edit_lock_ = true
+
+[node name="ObicneLijane" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 3
+position = Vector2(108, 268)
+scale = Vector2(4, 4)
+texture = ExtResource("25_1wp7u")
+
+[editable path="Hint"]
+[editable path="Hint2"]

@@ -1,0 +1,294 @@
+[gd_scene load_steps=55 format=4 uid="uid://cim55btugye6f"]
+
+[ext_resource type="Script" path="res://Levels/level_2.gd" id="1_uebjr"]
+[ext_resource type="TileSet" uid="uid://bcpa8ecnl6x1k" path="res://TileSets/tileset1.tres" id="3_1tixq"]
+[ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://components/karakter_test.tscn" id="3_p2taw"]
+[ext_resource type="Texture2D" uid="uid://6ecyseoejspq" path="res://assets/dialog_box.png" id="5_8fi66"]
+[ext_resource type="PackedScene" uid="uid://u5ke56djwgur" path="res://components/words.tscn" id="5_b2aq3"]
+[ext_resource type="PackedScene" uid="uid://cl7ls8hfg7qpg" path="res://components/hint.tscn" id="6_sig1j"]
+[ext_resource type="Texture2D" uid="uid://cb8q2j2jbhx8q" path="res://assets/doradjen/grozdje 1.png" id="9_g2880"]
+[ext_resource type="Texture2D" uid="uid://dbfrtdcoflnro" path="res://assets/doradjen/grozdje 2.png" id="10_5wx6n"]
+[ext_resource type="Texture2D" uid="uid://c1e0y2vqtlykn" path="res://assets/Znak_Goblin_Level.png" id="10_e80du"]
+[ext_resource type="Texture2D" uid="uid://dhd4vjjkwwy6e" path="res://assets/doradjen/grozdje 3.png" id="11_cdo7v"]
+[ext_resource type="Texture2D" uid="uid://blhtmw7jcdj2k" path="res://assets/doradjen/grozdje 4.png" id="12_5xuff"]
+[ext_resource type="Texture2D" uid="uid://cwk7g6ux5mpeq" path="res://assets/doradjen/grozdje 5.png" id="13_i8jj4"]
+[ext_resource type="Texture2D" uid="uid://nmuigrc2171b" path="res://assets/doradjen/grozdje 6.png" id="14_7fvux"]
+[ext_resource type="Texture2D" uid="uid://duwsl5ekhh2et" path="res://assets/doradjen/grozdje 7.png" id="15_ya703"]
+[ext_resource type="Texture2D" uid="uid://bjgj2guy4yh31" path="res://assets/doradjen/grozdje 8.png" id="16_hf5ym"]
+[ext_resource type="Texture2D" uid="uid://34axw8qwwhi2" path="res://assets/doradjen/grozdje 9.png" id="17_ggcpx"]
+[ext_resource type="Texture2D" uid="uid://br5vhlpglgay0" path="res://assets/doradjen/grozdje 10.png" id="18_6g8tp"]
+[ext_resource type="Texture2D" uid="uid://bx1xl3bp8s7a3" path="res://assets/doradjen/grozdje 11.png" id="19_wbxvt"]
+[ext_resource type="Texture2D" uid="uid://ca6fry5j8sonh" path="res://assets/doradjen/grozdje 12.png" id="20_iud87"]
+[ext_resource type="Texture2D" uid="uid://542e5bpi0sxo" path="res://assets/doradjen/grozdje 13.png" id="21_gkm8v"]
+[ext_resource type="Texture2D" uid="uid://c7hmi3lvvxagv" path="res://assets/doradjen/grozdje 14.png" id="22_ckqtt"]
+[ext_resource type="Texture2D" uid="uid://p7ejqkqqqwy0" path="res://assets/doradjen/grozdje 15.png" id="23_pvmkt"]
+[ext_resource type="Texture2D" uid="uid://co6gs1ywj641a" path="res://assets/doradjen/grozdje 16.png" id="24_nmupg"]
+[ext_resource type="Texture2D" uid="uid://pcbe3pcnv3oq" path="res://assets/doradjen/grozdje 17.png" id="25_1jcba"]
+[ext_resource type="Texture2D" uid="uid://c7i6d4vpudvnj" path="res://assets/doradjen/grozdje 18.png" id="26_l1yps"]
+[ext_resource type="Texture2D" uid="uid://c0ci4f5y8phxf" path="res://assets/doradjen/grozdje 19.png" id="27_x43dy"]
+[ext_resource type="Texture2D" uid="uid://bbn0t1o18oodo" path="res://assets/doradjen/grozdje 20.png" id="28_ejbra"]
+[ext_resource type="Texture2D" uid="uid://b4f4gh7fn2316" path="res://assets/doradjen/grozdje 21.png" id="29_51jq4"]
+[ext_resource type="Texture2D" uid="uid://cji42pjax0fmf" path="res://assets/doradjen/grozdje 22.png" id="30_nyqkv"]
+[ext_resource type="Texture2D" uid="uid://bf3hbk6aw5axr" path="res://assets/doradjen/grozdje 23.png" id="31_28jwf"]
+[ext_resource type="Texture2D" uid="uid://c7h17ax7l2fi6" path="res://assets/doradjen/grozdje 24.png" id="32_dob77"]
+[ext_resource type="Texture2D" uid="uid://bilbgpmkhknbl" path="res://assets/doradjen/grozdje 25.png" id="33_ncjqu"]
+[ext_resource type="Texture2D" uid="uid://bjyocsxumofse" path="res://assets/doradjen/grozdje 26.png" id="34_s7byd"]
+[ext_resource type="Texture2D" uid="uid://c5f2i0tdxa8ep" path="res://assets/doradjen/grozdje 27.png" id="35_ubce7"]
+[ext_resource type="Texture2D" uid="uid://cgf1w6paqxasu" path="res://assets/doradjen/grozdje 28.png" id="36_f7swe"]
+[ext_resource type="Texture2D" uid="uid://bysvnq6ni0qy0" path="res://assets/doradjen/grozdje 29.png" id="37_c8pul"]
+[ext_resource type="Texture2D" uid="uid://cerq5xba7gp3q" path="res://assets/doradjen/grozdje 30.png" id="38_uoh1j"]
+[ext_resource type="Texture2D" uid="uid://cmn5udvhdmnei" path="res://assets/doradjen/grozdje 31.png" id="39_hk841"]
+[ext_resource type="Texture2D" uid="uid://4t5hws8v0ol2" path="res://assets/doradjen/grozdje 32.png" id="40_vckto"]
+[ext_resource type="Texture2D" uid="uid://smc0rtp2v82l" path="res://assets/doradjen/grozdje 33.png" id="41_rfnrf"]
+[ext_resource type="Texture2D" uid="uid://oyd4ii6yow6m" path="res://assets/doradjen/grozdje 34.png" id="42_8jvw2"]
+[ext_resource type="Texture2D" uid="uid://q6hdcn5oyqfd" path="res://assets/doradjen/grozdje 35.png" id="43_dh8k1"]
+[ext_resource type="Texture2D" uid="uid://cq8scxdo73p8a" path="res://assets/doradjen/grozdje 36.png" id="44_71d4h"]
+[ext_resource type="Texture2D" uid="uid://clec2laeq7pmm" path="res://assets/doradjen/grozdje 37.png" id="45_fodcs"]
+[ext_resource type="Texture2D" uid="uid://4ej2jhnndvlb" path="res://assets/doradjen/grozdje 38.png" id="46_0tkq0"]
+[ext_resource type="Texture2D" uid="uid://cdmq2iwmcam70" path="res://assets/doradjen/grozdje 39.png" id="47_dvf8t"]
+[ext_resource type="Texture2D" uid="uid://cfexh7gns5jh6" path="res://assets/doradjen/idle/goblin vitez idle 1.png" id="48_wjtgd"]
+[ext_resource type="Texture2D" uid="uid://d2n05beyafkgs" path="res://assets/doradjen/idle/goblin vitez idle 2.png" id="49_22h4n"]
+[ext_resource type="Texture2D" uid="uid://cpg3wvlhip0hh" path="res://assets/doradjen/idle/goblin vitez idle 3.png" id="50_kkydb"]
+[ext_resource type="Texture2D" uid="uid://ddh2587nup8fd" path="res://assets/kuca_final.png" id="51_7bd6y"]
+[ext_resource type="Texture2D" uid="uid://grgab6qrlkvn" path="res://assets/doradjen/idle/goblin vitez idle 4.png" id="51_l5jkp"]
+[ext_resource type="Texture2D" uid="uid://bsac41lqjjxja" path="res://assets/Goblin_Level_Background.png" id="52_pww7j"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vsfgu"]
+radius = 19.125
+height = 55.5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m83p2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_g2880")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5wx6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cdo7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5xuff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_i8jj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7fvux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ya703")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hf5ym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ggcpx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6g8tp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wbxvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_iud87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gkm8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ckqtt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_pvmkt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_nmupg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_1jcba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_l1yps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_x43dy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ejbra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_51jq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_nyqkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_28jwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_dob77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ncjqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_s7byd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ubce7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_f7swe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_c8pul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_uoh1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_hk841")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_vckto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_rfnrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_8jvw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_dh8k1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_71d4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_fodcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_0tkq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_dvf8t")
+}],
+"loop": false,
+"name": &"end",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_wjtgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_22h4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_kkydb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_l5jkp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}]
+
+[node name="Level2" type="Node2D" groups=["level"]]
+position = Vector2(0, -3)
+script = ExtResource("1_uebjr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 3
+offset_right = 320.0
+offset_bottom = 180.0
+scale = Vector2(4.00356, 4.01477)
+texture = ExtResource("52_pww7j")
+
+[node name="Karakter" parent="." instance=ExtResource("3_p2taw")]
+position = Vector2(299, 462)
+scale = Vector2(5, 5)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+texture_filter = 3
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAAAAgAAAABAAIAAAABAAgAAAABAAIAAAACAAgAAAABAAIAAAADAAgAAAABAAIAAAAEAAgAAAABAAIAAAAFAAgAAAABAAIAAAAGAAgAAAABAAIAAAAHAAgAAAABAAIAAAAIAAgAAAABAAIAAAAJAAgAAAABAAIAAAAKAAgAAAABAAIAAAALAAgAAAABAAIAAAAMAAgAAAABAAIAAAATAAgAAAABAAIAAAANAAgAAAABAAIAAAAOAAgAAAABAAIAAAAPAAgAAAABAAIAAAAQAAgAAAABAAIAAAARAAgAAAABAAIAAAASAAgAAAABAAIAAAAAAAsAAAABAAMAAAAAAAoAAAABAAMAAAABAAoAAAABAAMAAAACAAoAAAABAAMAAAADAAoAAAABAAMAAAAEAAsAAAABAAMAAAAFAAsAAAABAAMAAAAGAAsAAAABAAMAAAAHAAoAAAABAAMAAAAGAAoAAAABAAMAAAAFAAoAAAABAAMAAAADAAsAAAABAAMAAAACAAsAAAABAAMAAAABAAsAAAABAAMAAAAEAAoAAAABAAMAAAAIAAoAAAABAAMAAAAJAAoAAAABAAMAAAAKAAoAAAABAAMAAAALAAoAAAABAAMAAAAMAAoAAAABAAMAAAANAAoAAAABAAMAAAAOAAoAAAABAAMAAAAPAAoAAAABAAMAAAAQAAoAAAABAAMAAAARAAoAAAABAAMAAAAHAAsAAAABAAMAAAAIAAsAAAABAAMAAAAJAAsAAAABAAMAAAAKAAsAAAABAAMAAAALAAsAAAABAAMAAAAMAAsAAAABAAMAAAANAAsAAAABAAMAAAAOAAsAAAABAAMAAAAPAAsAAAABAAMAAAAQAAsAAAABAAMAAAARAAsAAAABAAMAAAASAAsAAAABAAMAAAATAAsAAAABAAMAAAASAAoAAAABAAMAAAATAAoAAAABAAMAAAAAAAkAAAABAAMAAAABAAkAAAABAAMAAAACAAkAAAABAAMAAAADAAkAAAABAAMAAAAEAAkAAAABAAMAAAAFAAkAAAABAAMAAAAGAAkAAAABAAMAAAAHAAkAAAABAAMAAAAIAAkAAAABAAMAAAAJAAkAAAABAAMAAAAKAAkAAAABAAMAAAALAAkAAAABAAMAAAAMAAkAAAABAAMAAAANAAkAAAABAAMAAAAOAAkAAAABAAMAAAAPAAkAAAABAAMAAAAQAAkAAAABAAMAAAARAAkAAAABAAMAAAASAAkAAAABAAMAAAATAAkAAAABAAMAAAAFAAcAAAABAAQAAAADAAcAAAADAAMAAAAQAAcAAAADAAQAAAARAAcAAAABAAQAAAATAAcAAAACAAQAAAAIAAcAAAADAAQAAAA=")
+tile_set = ExtResource("3_1tixq")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+texture_filter = 3
+offset_left = 435.0
+offset_top = 109.0
+offset_right = 539.525
+offset_bottom = 131.89
+scale = Vector2(4, 4)
+texture = ExtResource("5_8fi66")
+region_rect = Rect2(10, 14, 56, 20)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 2
+patch_margin_bottom = 7
+
+[node name="Words" parent="." instance=ExtResource("5_b2aq3")]
+position = Vector2(486, 128)
+init_text = "gvozdje"
+wanted = "grozdje"
+
+[node name="Hint3" parent="." instance=ExtResource("6_sig1j")]
+texture_filter = 3
+position = Vector2(137, 397)
+scale = Vector2(4, 4)
+image = ExtResource("10_e80du")
+letter = "r"
+
+[node name="Icon" parent="Hint3" index="0"]
+texture = ExtResource("10_e80du")
+
+[node name="CollisionShape2D" parent="Hint3" index="1"]
+position = Vector2(-3.875, 1)
+shape = SubResource("CapsuleShape2D_vsfgu")
+
+[node name="Goblin" type="Node2D" parent="."]
+position = Vector2(624, 352)
+scale = Vector2(3, 3)
+
+[node name="KucaFinal" type="Sprite2D" parent="Goblin"]
+texture_filter = 3
+position = Vector2(38.6667, 13.3333)
+texture = ExtResource("51_7bd6y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Goblin"]
+texture_filter = 3
+position = Vector2(0.7, 2)
+sprite_frames = SubResource("SpriteFrames_m83p2")
+animation = &"end"
+autoplay = "idle"
+
+[node name="Hint" parent="." instance=ExtResource("6_sig1j")]
+letter = "v"
+
+[node name="CollisionShape2D" parent="Hint" index="1"]
+position = Vector2(169.5, 78)
+
+[node name="Hint4" parent="." instance=ExtResource("6_sig1j")]
+position = Vector2(1017, -19)
+letter = "v"
+
+[node name="CollisionShape2D" parent="Hint4" index="1"]
+position = Vector2(104, 44)
+
+[node name="Hint2" parent="." instance=ExtResource("6_sig1j")]
+letter = "v"
+
+[node name="CollisionShape2D" parent="Hint2" index="1"]
+position = Vector2(104, 44)
+
+[editable path="Hint3"]
+[editable path="Hint"]
+[editable path="Hint4"]
+[editable path="Hint2"]

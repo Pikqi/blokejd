@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://lx5x14umgqo5"]
+
+[ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://components/karakter_test.tscn" id="1_kdiil"]
+[ext_resource type="Texture2D" uid="uid://bw3t34gj8ik0m" path="res://assets/Level_3_Background.png" id="2_qefgs"]
+
+[node name="Level3" type="Node2D"]
+
+[node name="Karakter" parent="." instance=ExtResource("1_kdiil")]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4.04602, 4.04602)
+texture = ExtResource("2_qefgs")

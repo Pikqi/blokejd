@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl7ls8hfg7qpg"]
+
+[ext_resource type="Script" path="res://components/hint.gd" id="1_n4rce"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ciq8"]
+size = Vector2(12.5, 14)
+
+[node name="Hint" type="StaticBody2D" groups=["hint"]]
+input_pickable = true
+script = ExtResource("1_n4rce")
+
+[node name="Icon" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_5ciq8")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

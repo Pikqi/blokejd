@@ -1,0 +1,102 @@
+[gd_scene load_steps=6 format=3 uid="uid://d233iibt7fqlw"]
+
+[ext_resource type="Texture2D" uid="uid://hhc3p5slevl0" path="res://assets/Main_Menu.png" id="1_f1c1j"]
+[ext_resource type="Script" path="res://menu.gd" id="1_mnlwq"]
+[ext_resource type="Texture2D" uid="uid://bsqj6q5qnt1u3" path="res://assets/menu/Button_Normal.png" id="2_a8jb2"]
+[ext_resource type="Texture2D" uid="uid://c3admpbl5x5bl" path="res://assets/menu/Button_Click.png" id="3_qy7ss"]
+[ext_resource type="Texture2D" uid="uid://by06fak1xea8j" path="res://assets/menu/Button_Hover.png" id="4_mdhka"]
+
+[node name="Menu" type="Control" groups=["menu"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mnlwq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_f1c1j")
+stretch_mode = 4
+
+[node name="StartButton" type="TextureButton" parent="."]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.022
+offset_left = 448.0
+offset_top = 320.0
+offset_right = 448.0
+offset_bottom = 320.16
+scale = Vector2(4, 4)
+texture_normal = ExtResource("2_a8jb2")
+texture_pressed = ExtResource("3_qy7ss")
+texture_hover = ExtResource("4_mdhka")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="StartButton"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 8
+text = "Započni"
+
+[node name="Label" type="Label" parent="StartButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.75
+offset_bottom = 0.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "Započni
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="TextureButton" parent="."]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.075
+anchor_bottom = 0.022
+offset_left = 448.0
+offset_top = 447.0
+offset_right = 448.0
+offset_bottom = 447.16
+scale = Vector2(4, 4)
+texture_normal = ExtResource("2_a8jb2")
+texture_pressed = ExtResource("3_qy7ss")
+texture_hover = ExtResource("4_mdhka")
+
+[node name="Label" type="Label" parent="ExitButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.75
+offset_bottom = 0.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "Izadji"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

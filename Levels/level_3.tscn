@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://btf77a0bm41qq"]
+
+[ext_resource type="PackedScene" uid="uid://u5ke56djwgur" path="res://components/words.tscn" id="1_xr3l4"]
+[ext_resource type="Script" path="res://Levels/level_3.gd" id="1_ywpon"]
+[ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://components/karakter_test.tscn" id="2_vw448"]
+[ext_resource type="PackedScene" uid="uid://cl7ls8hfg7qpg" path="res://components/hint.tscn" id="3_vofie"]
+[ext_resource type="Texture2D" uid="uid://parcptrowo5a" path="res://icon.svg" id="4_av4y4"]
+
+[node name="Level3" type="Node2D" groups=["level"]]
+script = ExtResource("1_ywpon")
+
+[node name="Words" parent="." instance=ExtResource("1_xr3l4")]
+
+[node name="Karakter" parent="." instance=ExtResource("2_vw448")]
+
+[node name="Hint" parent="." instance=ExtResource("3_vofie")]
+position = Vector2(414, 221)
+image = ExtResource("4_av4y4")
+letter = "b"
