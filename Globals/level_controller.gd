@@ -43,7 +43,7 @@ func _process(delta: float) -> void:
 	
 func handle_character_exited():
 	level += 1
-	if(level > scenes.size()):
+	if(level >= scenes.size()):
 		return
 	TransitionRect.transition_to(scenes[level])
 	pass
