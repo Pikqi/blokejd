@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://curloulfinxeg"]
 
-[ext_resource type="Texture2D" uid="uid://dkgc04kko4lkh" path="res://assets/Game_Font.png" id="1_wu1xk"]
+[ext_resource type="Texture2D" uid="uid://dkgc04kko4lkh" path="res://assets/Game_Font.png" id="1_58yrw"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pd7yp"]
-texture = ExtResource("1_wu1xk")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h26pc"]
+texture = ExtResource("1_58yrw")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -36,4 +36,4 @@ texture = ExtResource("1_wu1xk")
 9:2/0 = 0
 
 [resource]
-sources/0 = SubResource("TileSetAtlasSource_pd7yp")
+sources/0 = SubResource("TileSetAtlasSource_h26pc")
