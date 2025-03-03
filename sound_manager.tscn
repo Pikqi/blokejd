@@ -1,0 +1,48 @@
+[gd_scene load_steps=12 format=3 uid="uid://8kfmmc074v4i"]
+
+[ext_resource type="Script" path="res://sound_manager.gd" id="1_e4trj"]
+[ext_resource type="AudioStream" uid="uid://b10sgasd2xh8i" path="res://assets/sounds/game_start.mp3" id="1_j47v8"]
+[ext_resource type="AudioStream" uid="uid://dqhe720omemea" path="res://assets/sounds/door_opening.mp3" id="2_su4pq"]
+[ext_resource type="AudioStream" uid="uid://3r5mprjy45eg" path="res://assets/sounds/door_exploding.mp3" id="3_t3qvn"]
+[ext_resource type="AudioStream" uid="uid://b005exgs7lm7i" path="res://assets/sounds/gej_dzem.wav" id="4_k8o0y"]
+[ext_resource type="AudioStream" uid="uid://dks7uf4b4qslf" path="res://assets/sounds/goblini_beze.mp3" id="5_cvyof"]
+[ext_resource type="AudioStream" uid="uid://chb1o07b1swys" path="res://assets/sounds/gvozdje_u_grozdje.mp3" id="6_1ohhc"]
+[ext_resource type="AudioStream" uid="uid://dnyly4w8h3w1c" path="res://assets/sounds/kost_pada.mp3" id="7_3ju87"]
+[ext_resource type="AudioStream" uid="uid://c88ucd6xqakdn" path="res://assets/sounds/rune_shooting.mp3" id="8_taolb"]
+[ext_resource type="AudioStream" uid="uid://ysch7olalwmr" path="res://assets/sounds/walking_grass.mp3" id="9_ewqul"]
+[ext_resource type="AudioStream" uid="uid://bsj8jtqu8tmdg" path="res://assets/sounds/walking_stone.mp3" id="10_g6et4"]
+
+[node name="SoundManager" type="Node"]
+script = ExtResource("1_e4trj")
+
+[node name="GameStart" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_j47v8")
+
+[node name="DoorOpening" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_su4pq")
+
+[node name="DoorExploding" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_t3qvn")
+
+[node name="GejDzem" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_k8o0y")
+autoplay = true
+
+[node name="GobliniBeze" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_cvyof")
+
+[node name="GvozdjeUGrozdje" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_1ohhc")
+
+[node name="KostPada" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_3ju87")
+volume_db = -5.275
+
+[node name="RuneShooting" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_taolb")
+
+[node name="WalkingGrass" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_ewqul")
+
+[node name="WalkingStone" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_g6et4")

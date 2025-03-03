@@ -13,6 +13,7 @@ func _process(delta: float) -> void:
 
 func _on_start_button_pressed() -> void:
 	LevelController.start_game()
+	SoundManager.play_sound("game_start")
 
 
 func _on_exit_button_pressed() -> void:

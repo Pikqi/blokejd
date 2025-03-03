@@ -137,7 +137,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("34_s7byd")
+}],
+"loop": false,
+"name": &"end1",
+"speed": 7.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("35_ubce7")
 }, {
@@ -178,7 +183,7 @@ animations = [{
 "texture": ExtResource("47_dvf8t")
 }],
 "loop": false,
-"name": &"end",
+"name": &"end2",
 "speed": 7.0
 }, {
 "frames": [{
@@ -266,7 +271,7 @@ texture = ExtResource("51_7bd6y")
 texture_filter = 3
 position = Vector2(0.7, 2)
 sprite_frames = SubResource("SpriteFrames_m83p2")
-animation = &"end"
+animation = &"end1"
 autoplay = "idle"
 
 [node name="Hint" parent="." instance=ExtResource("6_sig1j")]

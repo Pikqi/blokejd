@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/game_start.mp3-b43b76ae80df815ff91171f9e6c4b7
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

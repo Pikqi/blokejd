@@ -41,10 +41,15 @@ func _process(delta: float) -> void:
 	pass
 
 func level_won():
+	SoundManager.play_sound(\"kost_pada\")
 	$Vulture/AnimatedSprite2D.play(\"end\")
 	await $Vulture/AnimatedSprite2D.animation_finished
 	$Vulture/AnimatedSprite2D.play(\"end_idle\")
 	$Karakter.start_walk()
+	SoundManager.play_sound(\"walking_grass\")
+	
+func _exit_tree() -> void:
+	SoundManager.stop_sound(\"walking_grass\")
 "
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tlr0c"]

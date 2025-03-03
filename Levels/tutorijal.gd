@@ -22,6 +22,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Character:
 		$Karakter.is_moving = false
 		$Timer.start()
+		SoundManager.door_opening.play()
 
 
 func _on_timer_timeout() -> void:

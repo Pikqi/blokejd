@@ -11,6 +11,15 @@ func _process(delta: float) -> void:
 	pass
 	
 func level_won():
-	$Goblin/AnimatedSprite2D.play("end")
+	$Goblin/AnimatedSprite2D.play("end1")
+	SoundManager.play_sound("gvozdje_u_grozdje")
+	await $Goblin/AnimatedSprite2D.animation_finished
+	SoundManager.play_sound("goblini_beze")
+	$Goblin/AnimatedSprite2D.play("end2")
+	
 	await $Goblin/AnimatedSprite2D.animation_finished
 	$Karakter.start_walk()
+	SoundManager.play_sound("walking_stone")
+
+func _exit_tree() -> void:
+	SoundManager.stop_sound("walking_grass")
