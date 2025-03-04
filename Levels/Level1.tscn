@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://d0nfl3labvb3k"]
+[gd_scene load_steps=32 format=4 uid="uid://d0nfl3labvb3k"]
 
 [ext_resource type="Texture2D" uid="uid://cu6558nr6oqof" path="res://assets/level1/Level_1.png" id="1_0heo0"]
 [ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://components/karakter_test.tscn" id="3_1hvn3"]
@@ -7,9 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://bs073ockv27i0" path="res://assets/Vulture_Idle/Vulture_Idle_strip.png" id="7_3ulxw"]
 [ext_resource type="PackedScene" uid="uid://u5ke56djwgur" path="res://components/words.tscn" id="7_sd5qj"]
 [ext_resource type="TileSet" uid="uid://bcpa8ecnl6x1k" path="res://TileSets/tileset1.tres" id="8_pfuxe"]
-[ext_resource type="Texture2D" uid="uid://db0uwco1m5n8b" path="res://assets/level1/Drvo Desno.png" id="20_rdg17"]
-[ext_resource type="Texture2D" uid="uid://er1d7wwx2fqr" path="res://assets/level1/Drvo Levo.png" id="21_v6kvm"]
-[ext_resource type="Texture2D" uid="uid://c32tltb3pbwy5" path="res://assets/level1/Drvo sa M Lijanom.png" id="22_fwcg4"]
 [ext_resource type="PackedScene" uid="uid://cl7ls8hfg7qpg" path="res://components/hint.tscn" id="23_g3im6"]
 [ext_resource type="Texture2D" uid="uid://lxt605n8qt3f" path="res://assets/level1/M Lijane.png" id="23_o8yb6"]
 [ext_resource type="Texture2D" uid="uid://bxmsiwtxpojsw" path="res://assets/level1/Obicne Lijane.png" id="25_1wp7u"]
@@ -241,28 +238,6 @@ sprite_frames = SubResource("SpriteFrames_tlr0c")
 animation = &"end_idle"
 autoplay = "idle"
 
-[node name="DrvoDesno" type="Sprite2D" parent="."]
-visible = false
-texture_filter = 3
-position = Vector2(1094, 257)
-scale = Vector2(4, 4)
-texture = ExtResource("20_rdg17")
-metadata/_edit_lock_ = true
-
-[node name="DrvoLevo" type="Sprite2D" parent="."]
-visible = false
-texture_filter = 3
-position = Vector2(192, 257)
-scale = Vector2(4, 4)
-texture = ExtResource("21_v6kvm")
-
-[node name="DrvoSaMLijanom" type="Sprite2D" parent="."]
-visible = false
-texture_filter = 3
-position = Vector2(886, 322)
-scale = Vector2(4, 4)
-texture = ExtResource("22_fwcg4")
-
 [node name="Hint" parent="." instance=ExtResource("23_g3im6")]
 texture_filter = 3
 position = Vector2(880, 318)
@@ -276,7 +251,7 @@ position = Vector2(-14.5, 6.25)
 [node name="MLijane" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 3
-position = Vector2(880, 318)
+position = Vector2(834, 320)
 scale = Vector2(4, 4)
 texture = ExtResource("23_o8yb6")
 
@@ -295,7 +270,7 @@ metadata/_edit_lock_ = true
 [node name="ObicneLijane" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 3
-position = Vector2(108, 269)
+position = Vector2(100, 272)
 scale = Vector2(4, 4)
 texture = ExtResource("25_1wp7u")
 

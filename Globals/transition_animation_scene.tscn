@@ -538,7 +538,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"4",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [node name="TransitionAnimationScene" type="Node2D"]
@@ -548,8 +548,9 @@ scale = Vector2(4, 4)
 script = ExtResource("1_srm45")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
+visible = false
 top_level = true
 position = Vector2(640, 361)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_kkkaq")
-animation = &"2"
+animation = &"3"

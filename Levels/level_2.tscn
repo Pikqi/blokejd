@@ -216,8 +216,8 @@ scale = Vector2(4.00356, 4.01477)
 texture = ExtResource("52_pww7j")
 
 [node name="Karakter" parent="." instance=ExtResource("3_p2taw")]
-position = Vector2(299, 462)
-scale = Vector2(5, 5)
+position = Vector2(299, 472)
+scale = Vector2(4, 4)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 3

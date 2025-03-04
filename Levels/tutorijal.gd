@@ -29,7 +29,7 @@ func _on_timer_timeout() -> void:
 	LevelController.handle_character_exited()
 
 func level_won():
-		$Karakter.is_moving = true
+		$Karakter.start_walk()
 
 func _on_hint_hack_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("mouse_1") and not hint_added:

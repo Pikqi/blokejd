@@ -13,6 +13,7 @@ func _process(delta: float) -> void:
 func transition_to(_next_scene: PackedScene, i: int) -> void:
 	# Plays the Fade animation and wait until it finishes
 	Input.set_custom_mouse_cursor(null)
+	Inventory.visible = false
 	$Animation.play(str(i))
 	if($Animation.animation == str(i)):
 		$Animation.visible = true
@@ -20,5 +21,6 @@ func transition_to(_next_scene: PackedScene, i: int) -> void:
 		
 		await $Animation.animation_finished
 	$Animation.visible = false
+	Inventory.visible = true
 	# Changes the scene
 	get_tree().change_scene_to_packed(_next_scene)
