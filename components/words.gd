@@ -1,7 +1,7 @@
 extends Node2D
 class_name Words
 
-@export var init_text: String = "đamu"
+@export var init_text: String = "đamuž"
 @export var wanted: String = "best"
 @export var width = 10
 @onready var text_size = init_text.length()
@@ -24,9 +24,13 @@ func draw_text():
 	var i = 0
 	var row
 	var col
+	$TileMapLayer.clear()
 	for char in text:
 		var coords = charToCoord(char)
 		$TileMapLayer.set_cell(Vector2(i,0), 0, coords)
+		if(char == "ž"):
+			$TileMapLayer.set_cell(Vector2(i,-1), 0, Vector2(6,2))
+			
 		i+=1
 
 func _process(delta: float) -> void:
@@ -38,6 +42,9 @@ func charToCoord(char: String)-> Vector2:
 	if(char == "đ"):
 			row = 2
 			col = 9
+	elif(char == "ž"):
+			row = 2
+			col = 5
 	else:
 		var ascii = char.unicode_at(0) - "a".unicode_at(0)
 		row = ascii / width
@@ -49,12 +56,10 @@ func handle_letter_pressed(index: int):
 	if(selected_letter == null or selected_letter == ""):
 		return
 	
-	var coords = charToCoord(selected_letter)
+	var new_text = text.left(index) +  selected_letter +   text.right(text.length() - index - 1)
 	
-	$TileMapLayer.set_cell(Vector2(index,0), 0, coords)
-	var buff := text.to_utf8_buffer()
-	buff[index] = selected_letter.to_lower().to_utf8_buffer()[0]
-	text = buff.get_string_from_utf8()
+	text=new_text
+	draw_text()
 	
 	if(text == wanted):
 		win.emit()

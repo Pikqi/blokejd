@@ -1,13 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://tqdnox3ourwk"]
+[gd_scene load_steps=8 format=3 uid="uid://tqdnox3ourwk"]
 
 [ext_resource type="Script" path="res://Globals/inventory.gd" id="1_7x2vi"]
 [ext_resource type="PackedScene" uid="uid://bwnn7o8busxhx" path="res://components/invetory_hint.tscn" id="2_eym70"]
 [ext_resource type="Texture2D" uid="uid://lxt605n8qt3f" path="res://assets/level1/M Lijane.png" id="3_hfd21"]
 [ext_resource type="Texture2D" uid="uid://6ecyseoejspq" path="res://assets/dialog_box.png" id="4_y4mne"]
 [ext_resource type="Texture2D" uid="uid://c2ho4drsh576g" path="res://assets/Cloak.png" id="5_rjwin"]
+[ext_resource type="Texture2D" uid="uid://b48ibmgyq46oc" path="res://assets/Restart_Sign.png" id="6_6v7ie"]
+[ext_resource type="Texture2D" uid="uid://ctjis0jj8gwto" path="res://assets/Restart_Sign_2.png" id="7_auu56"]
 
 [node name="Inventory" type="CanvasLayer"]
-visible = false
 script = ExtResource("1_7x2vi")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
@@ -47,6 +48,7 @@ theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
 [node name="Label" type="Label" parent="MarginContainer2"]
+visible = false
 layout_mode = 2
 text = "Pritisnite r da bi pokusali ponovo."
 
@@ -85,3 +87,15 @@ letter = "M"
 
 [node name="InvetoryButton2" parent="MarginContainer/HBoxContainer" instance=ExtResource("2_eym70")]
 layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 1188.0
+offset_top = 34.0
+offset_right = 1204.0
+offset_bottom = 50.0
+scale = Vector2(4, 4)
+texture_normal = ExtResource("6_6v7ie")
+texture_pressed = ExtResource("6_6v7ie")
+texture_hover = ExtResource("7_auu56")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

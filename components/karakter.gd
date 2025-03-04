@@ -14,3 +14,6 @@ func _physics_process(delta: float) -> void:
 func start_walk():
 	is_moving = true
 	$AnimatedSprite2D.play("walk")
+func stop_walking():
+	is_moving = false
+	$AnimatedSprite2D.play("default")

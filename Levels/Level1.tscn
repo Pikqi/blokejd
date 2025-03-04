@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://d0nfl3labvb3k"]
+[gd_scene load_steps=32 format=3 uid="uid://d0nfl3labvb3k"]
 
 [ext_resource type="Texture2D" uid="uid://cu6558nr6oqof" path="res://assets/level1/Level_1.png" id="1_0heo0"]
 [ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://components/karakter_test.tscn" id="3_1hvn3"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bpvwadmkmp1l2" path="res://assets/Vulture_end/Vulture_End_strip10.png" id="6_2dpca"]
 [ext_resource type="Texture2D" uid="uid://bs073ockv27i0" path="res://assets/Vulture_Idle/Vulture_Idle_strip.png" id="7_3ulxw"]
 [ext_resource type="PackedScene" uid="uid://u5ke56djwgur" path="res://components/words.tscn" id="7_sd5qj"]
-[ext_resource type="TileSet" uid="uid://bcpa8ecnl6x1k" path="res://TileSets/tileset1.tres" id="8_pfuxe"]
 [ext_resource type="PackedScene" uid="uid://cl7ls8hfg7qpg" path="res://components/hint.tscn" id="23_g3im6"]
 [ext_resource type="Texture2D" uid="uid://lxt605n8qt3f" path="res://assets/level1/M Lijane.png" id="23_o8yb6"]
 [ext_resource type="Texture2D" uid="uid://bxmsiwtxpojsw" path="res://assets/level1/Obicne Lijane.png" id="25_1wp7u"]
@@ -180,6 +179,9 @@ load_path = "res://.godot/imported/Obicne Lijane.png-3654453bb1d023805d0c804ed32
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jie3u"]
 size = Vector2(34.875, 36.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yjc5"]
+size = Vector2(45.75, 41.5)
+
 [node name="Level1" type="Node2D" groups=["level"]]
 script = SubResource("GDScript_ktprr")
 
@@ -194,15 +196,6 @@ size_flags_vertical = 4
 texture = ExtResource("1_0heo0")
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
-
-[node name="Level" type="TileMapLayer" parent="."]
-visible = false
-z_index = 1
-texture_filter = 3
-position = Vector2(0, 1)
-scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAAAAgAAAABAAAAAAABAAgAAAABAAAAAAACAAgAAAABAAAAAAADAAgAAAABAAAAAAAEAAgAAAABAAAAAAAFAAgAAAABAAAAAAAGAAgAAAABAAAAAAAHAAgAAAABAAAAAAAIAAgAAAACAAAAAAAMAAgAAAABAAAAAAANAAgAAAABAAAAAAAOAAgAAAABAAAAAAAPAAgAAAABAAAAAAAQAAgAAAABAAAAAAARAAgAAAABAAAAAAASAAgAAAABAAAAAAATAAgAAAABAAAAAAAAAAkAAAABAAEAAAAAAAoAAAABAAEAAAABAAkAAAABAAEAAAABAAoAAAABAAEAAAACAAkAAAABAAEAAAACAAoAAAABAAEAAAADAAkAAAABAAEAAAADAAoAAAABAAEAAAAEAAkAAAABAAEAAAAEAAoAAAABAAEAAAAFAAkAAAABAAEAAAAFAAoAAAABAAEAAAAGAAkAAAABAAEAAAAGAAoAAAABAAEAAAAHAAkAAAABAAEAAAAHAAoAAAABAAEAAAAIAAkAAAACAAEAAAAIAAoAAAACAAEAAAAMAAkAAAABAAEAAAAMAAoAAAABAAEAAAANAAkAAAABAAEAAAANAAoAAAABAAEAAAAOAAkAAAABAAEAAAAOAAoAAAABAAEAAAAPAAkAAAABAAEAAAAPAAoAAAABAAEAAAAQAAkAAAABAAEAAAAQAAoAAAABAAEAAAARAAkAAAABAAEAAAARAAoAAAABAAEAAAASAAkAAAABAAEAAAASAAoAAAABAAEAAAATAAkAAAABAAEAAAATAAoAAAABAAEAAAAAAAsAAAABAAEAAAABAAsAAAABAAEAAAACAAsAAAABAAEAAAADAAsAAAABAAEAAAAEAAsAAAABAAEAAAAFAAsAAAABAAEAAAAGAAsAAAABAAEAAAAHAAsAAAABAAEAAAAIAAsAAAACAAEAAAAMAAsAAAABAAEAAAANAAsAAAABAAEAAAAOAAsAAAABAAEAAAAPAAsAAAABAAEAAAAQAAsAAAABAAEAAAARAAsAAAABAAEAAAASAAsAAAABAAEAAAATAAsAAAABAAEAAAALAAgAAAAAAAAAAAALAAkAAAAAAAEAAAALAAoAAAAAAAEAAAALAAsAAAAAAAEAAAAGAAcAAAAAAAQAAAAEAAcAAAAEAAQAAAAPAAcAAAAEAAMAAAADAAcAAAADAAEAAAAQAAcAAAAEAAQAAAASAAcAAAAEAAEAAAAAAAcAAAAEAAMAAAAQAAAAAAAFAAEAAAA=")
-tile_set = ExtResource("8_pfuxe")
 
 [node name="Karakter" parent="." instance=ExtResource("3_1hvn3")]
 position = Vector2(165, 473)
@@ -221,6 +214,7 @@ patch_margin_left = 6
 patch_margin_top = 7
 patch_margin_right = 2
 patch_margin_bottom = 7
+metadata/_edit_use_anchors_ = true
 
 [node name="Reci" parent="." instance=ExtResource("7_sd5qj")]
 position = Vector2(355, 155)
@@ -232,24 +226,11 @@ position = Vector2(-4, 34)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Vulture"]
 texture_filter = 3
-position = Vector2(546, 275)
+position = Vector2(544, 273)
 scale = Vector2(4, 3.963)
 sprite_frames = SubResource("SpriteFrames_tlr0c")
 animation = &"end_idle"
 autoplay = "idle"
-
-[node name="Hint" parent="." instance=ExtResource("23_g3im6")]
-texture_filter = 3
-position = Vector2(880, 318)
-scale = Vector2(4, 4)
-image = ExtResource("23_o8yb6")
-letter = "m"
-
-[node name="Icon" parent="Hint" index="0"]
-position = Vector2(-11.5, 0.5)
-
-[node name="CollisionShape2D" parent="Hint" index="1"]
-position = Vector2(-14.5, 6.25)
 
 [node name="MLijane" type="Sprite2D" parent="."]
 visible = false
@@ -270,6 +251,20 @@ position = Vector2(0.9375, -5)
 shape = SubResource("RectangleShape2D_jie3u")
 metadata/_edit_lock_ = true
 
+[node name="Hint" parent="." instance=ExtResource("23_g3im6")]
+texture_filter = 3
+position = Vector2(880, 318)
+scale = Vector2(4, 4)
+image = ExtResource("23_o8yb6")
+letter = "m"
+
+[node name="Icon" parent="Hint" index="0"]
+position = Vector2(-11.5, 0.5)
+
+[node name="CollisionShape2D" parent="Hint" index="1"]
+position = Vector2(-19.625, 1.5)
+shape = SubResource("RectangleShape2D_0yjc5")
+
 [node name="ObicneLijane" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 3
@@ -277,5 +272,5 @@ position = Vector2(100, 272)
 scale = Vector2(4, 4)
 texture = ExtResource("25_1wp7u")
 
-[editable path="Hint"]
 [editable path="Hint2"]
+[editable path="Hint"]

@@ -33,3 +33,7 @@ func get_selected_letter():
 	for childd: InventoryHint in %HBoxContainer.get_children():
 		if childd.is_selected:
 			return childd.letter
+
+
+func _on_texture_button_pressed() -> void:
+	LevelController.reset_words()

@@ -229,8 +229,8 @@ tile_set = ExtResource("3_1tixq")
 texture_filter = 3
 offset_left = 435.0
 offset_top = 109.0
-offset_right = 539.525
-offset_bottom = 131.89
+offset_right = 530.0
+offset_bottom = 132.0
 scale = Vector2(4, 4)
 texture = ExtResource("5_8fi66")
 region_rect = Rect2(10, 14, 56, 20)
@@ -240,9 +240,9 @@ patch_margin_right = 2
 patch_margin_bottom = 7
 
 [node name="Words" parent="." instance=ExtResource("5_b2aq3")]
-position = Vector2(486, 128)
-init_text = "gvozđe"
-wanted = "grozđe"
+position = Vector2(486, 135)
+init_text = "gvožđe"
+wanted = "grožđe"
 
 [node name="Hint3" parent="." instance=ExtResource("6_sig1j")]
 texture_filter = 3
