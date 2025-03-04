@@ -12,6 +12,7 @@ func _process(delta: float) -> void:
 	
 func transition_to(_next_scene: PackedScene, i: int) -> void:
 	# Plays the Fade animation and wait until it finishes
+	Input.set_custom_mouse_cursor(null)
 	$Animation.play(str(i))
 	if($Animation.animation == str(i)):
 		$Animation.visible = true

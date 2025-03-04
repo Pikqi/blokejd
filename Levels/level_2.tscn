@@ -241,8 +241,8 @@ patch_margin_bottom = 7
 
 [node name="Words" parent="." instance=ExtResource("5_b2aq3")]
 position = Vector2(486, 128)
-init_text = "gvozdje"
-wanted = "grozdje"
+init_text = "gvozđe"
+wanted = "grozđe"
 
 [node name="Hint3" parent="." instance=ExtResource("6_sig1j")]
 texture_filter = 3
