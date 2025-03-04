@@ -2,9 +2,10 @@ extends Node2D
 
 const LEVEL_1 = preload("res://Levels/Level1.tscn")
 const LEVEL_2 = preload("res://Levels/level_2.tscn")
+const LEVEL_3 = preload("res://Levels/level_3.tscn")
 const PROLOUGE = preload("res://Levels/prolouge.tscn")
 const TUTORIJAL = preload("res://Levels/tutorijal.tscn")
-var scenes: Array[PackedScene] = [PROLOUGE,TUTORIJAL, LEVEL_1, LEVEL_2]
+var scenes: Array[PackedScene] = [PROLOUGE,TUTORIJAL, LEVEL_1, LEVEL_2, LEVEL_3]
 var level = 0
 @export var enable_dialogs = true
 
@@ -44,7 +45,8 @@ func handle_character_exited():
 	level += 1
 	if(level >= scenes.size()):
 		return
-	TransitionRect.transition_to(scenes[level])
+	#TransitionRect.transition_to(scenes[level])
+	TransitionAnimationScene.transition_to(scenes[level], level)
 	pass
 
 func new_scene():

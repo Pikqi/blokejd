@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+TransitionAnimationScene="*res://Globals/transition_animation_scene.tscn"
 SoundManager="*res://sound_manager.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Inventory="*res://Globals/inventory.tscn"
