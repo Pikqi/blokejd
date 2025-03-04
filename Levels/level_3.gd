@@ -1,9 +1,11 @@
 extends Level
 
-
+const LEVEL_3 = preload("res://dialogues/level3.dialogue")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	LevelController.new_scene()
+	DialogueManager.show_dialogue_balloon(LEVEL_3)
+
 	super()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

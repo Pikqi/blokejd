@@ -23,6 +23,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		$Karakter.is_moving = false
 		$Timer.start()
 		SoundManager.door_opening.play()
+		$Doors.play("default")
 		$Karakter.stop_walking()
 
 

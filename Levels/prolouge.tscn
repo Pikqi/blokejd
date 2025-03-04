@@ -1,24 +1,31 @@
-[gd_scene load_steps=8 format=4 uid="uid://dg40hvyvc0f1m"]
+[gd_scene load_steps=9 format=4 uid="uid://dg40hvyvc0f1m"]
 
 [ext_resource type="Script" path="res://Levels/prolouge.gd" id="1_4d3qx"]
 [ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://components/karakter_test.tscn" id="1_dui4b"]
 [ext_resource type="Texture2D" uid="uid://cfni6flam42tm" path="res://assets/prolouge/pr_background.png" id="1_o8lm1"]
 [ext_resource type="TileSet" uid="uid://bcpa8ecnl6x1k" path="res://TileSets/tileset1.tres" id="2_8y6oj"]
-[ext_resource type="Texture2D" uid="uid://cdxs3uo1kprir" path="res://assets/King_1.png" id="5_600r0"]
-[ext_resource type="Texture2D" uid="uid://mmrhhefbkin0" path="res://assets/King_2.png" id="6_fixgm"]
+[ext_resource type="Texture2D" uid="uid://dc2fena4rgolc" path="res://assets/prolouge/King_Animation.png" id="5_2tq83"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cq33"]
+atlas = ExtResource("5_2tq83")
+region = Rect2(0, 0, 31, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3rmv"]
+atlas = ExtResource("5_2tq83")
+region = Rect2(31, 0, 31, 40)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_akwna"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_600r0")
+"texture": SubResource("AtlasTexture_5cq33")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_fixgm")
+"texture": SubResource("AtlasTexture_h3rmv")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [node name="Prolouge" type="Node2D" groups=["level"]]
@@ -26,16 +33,17 @@ script = ExtResource("1_4d3qx")
 
 [node name="Background" type="TextureRect" parent="."]
 texture_filter = 3
-offset_top = -57.0
+offset_top = -2.0
 offset_right = 1279.0
-offset_bottom = 664.0
+offset_bottom = 719.0
 texture = ExtResource("1_o8lm1")
 
 [node name="Karakter" parent="." instance=ExtResource("1_dui4b")]
-position = Vector2(561, 475)
+position = Vector2(561, 537)
 scale = Vector2(-4, 4)
 
 [node name="Tiles" type="TileMapLayer" parent="."]
+visible = false
 texture_filter = 3
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAAAAAkAAAAFAAQAAAAAAAoAAAAFAAQAAAAAAAsAAAAFAAQAAAABAAkAAAAFAAQAAAABAAoAAAAFAAQAAAABAAsAAAAFAAQAAAACAAkAAAAFAAQAAAACAAoAAAAFAAQAAAACAAsAAAAFAAQAAAADAAkAAAAFAAQAAAADAAoAAAAFAAQAAAADAAsAAAAFAAQAAAAEAAkAAAAFAAQAAAAEAAoAAAAFAAQAAAAEAAsAAAAFAAQAAAAFAAkAAAAFAAQAAAAFAAoAAAAFAAQAAAAFAAsAAAAFAAQAAAAGAAkAAAAFAAQAAAAGAAoAAAAFAAQAAAAGAAsAAAAFAAQAAAAHAAkAAAAFAAQAAAAHAAoAAAAFAAQAAAAHAAsAAAAFAAQAAAAIAAkAAAAFAAQAAAAIAAoAAAAFAAQAAAAIAAsAAAAFAAQAAAAJAAkAAAAFAAQAAAAJAAoAAAAFAAQAAAAJAAsAAAAFAAQAAAAKAAkAAAAFAAQAAAAKAAoAAAAFAAQAAAAKAAsAAAAFAAQAAAALAAkAAAAFAAQAAAALAAoAAAAFAAQAAAALAAsAAAAFAAQAAAAMAAkAAAAFAAQAAAAMAAoAAAAFAAQAAAAMAAsAAAAFAAQAAAANAAkAAAAFAAQAAAANAAoAAAAFAAQAAAANAAsAAAAFAAQAAAAOAAkAAAAFAAQAAAAOAAoAAAAFAAQAAAAOAAsAAAAFAAQAAAAPAAkAAAAFAAQAAAAPAAoAAAAFAAQAAAAPAAsAAAAFAAQAAAAQAAkAAAAFAAQAAAAQAAoAAAAFAAQAAAAQAAsAAAAFAAQAAAARAAkAAAAFAAQAAAARAAoAAAAFAAQAAAARAAsAAAAFAAQAAAASAAkAAAAFAAQAAAASAAoAAAAFAAQAAAASAAsAAAAFAAQAAAATAAkAAAAFAAQAAAATAAoAAAAFAAQAAAATAAsAAAAFAAQAAAAAAAgAAAAFAAMAAAABAAgAAAAFAAMAAAACAAgAAAAFAAMAAAADAAgAAAAFAAMAAAAEAAgAAAAFAAMAAAAFAAgAAAAFAAMAAAAGAAgAAAAFAAMAAAAHAAgAAAAFAAMAAAAIAAgAAAAFAAMAAAAJAAgAAAAFAAMAAAAKAAgAAAAFAAMAAAALAAgAAAAFAAMAAAAMAAgAAAAFAAMAAAANAAgAAAAFAAMAAAAOAAgAAAAFAAMAAAAPAAgAAAAFAAMAAAAQAAgAAAAFAAMAAAARAAgAAAAFAAMAAAASAAgAAAAFAAMAAAATAAgAAAAFAAMAAAA=")
@@ -43,9 +51,9 @@ tile_set = ExtResource("2_8y6oj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 3
-position = Vector2(129, 432)
+position = Vector2(129, 498)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_akwna")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.0818738
+frame_progress = 0.724221

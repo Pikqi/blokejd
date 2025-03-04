@@ -69,7 +69,7 @@ restart={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogues/dialogue.dialogue", "res://dialogues/prologue.dialogue", "res://dialogues/tutorial.dialogue", "res://dialogues/level1.dialogue", "res://dialogues/level2.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogues/dialogue.dialogue", "res://dialogues/prologue.dialogue", "res://dialogues/tutorial.dialogue", "res://dialogues/level1.dialogue", "res://dialogues/level2.dialogue", "res://dialogues/level3.dialogue")
 
 [rendering]
 

@@ -241,10 +241,14 @@ texture = ExtResource("23_o8yb6")
 
 [node name="Hint2" parent="." instance=ExtResource("23_g3im6")]
 texture_filter = 3
-position = Vector2(108, 268)
+position = Vector2(107, 268)
 scale = Vector2(4, 4)
 image = SubResource("CompressedTexture2D_08rg2")
 letter = "v"
+
+[node name="Icon" parent="Hint2" index="0"]
+position = Vector2(0.25, 0)
+texture = ExtResource("25_1wp7u")
 
 [node name="CollisionShape2D" parent="Hint2" index="1"]
 position = Vector2(0.9375, -5)
