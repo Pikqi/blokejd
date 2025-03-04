@@ -238,7 +238,7 @@ wanted = "grožđe"
 
 [node name="Hint3" parent="." instance=ExtResource("6_sig1j")]
 texture_filter = 3
-position = Vector2(137, 397)
+position = Vector2(137, 400)
 scale = Vector2(4, 4)
 image = ExtResource("10_e80du")
 letter = "r"
