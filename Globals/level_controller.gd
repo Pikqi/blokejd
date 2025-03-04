@@ -20,7 +20,6 @@ func _ready() -> void:
 
 func start_game():
 	await TransitionRect.transition_to(scenes[0])
-	Inventory.visible = true
 
 
 func _input(event: InputEvent) -> void:

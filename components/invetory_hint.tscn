@@ -6,6 +6,8 @@
 [node name="InvetoryHint" type="TextureRect" groups=["inventory_hint"]]
 z_index = 500
 texture_filter = 3
+offset_right = 32.0
+offset_bottom = 32.0
 texture = ExtResource("1_ue5ao")
 expand_mode = 3
 stretch_mode = 4
@@ -13,7 +15,6 @@ script = ExtResource("2_aslvm")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 texture_filter = 3
-custom_minimum_size = Vector2(50, 50)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
