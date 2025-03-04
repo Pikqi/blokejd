@@ -11,4 +11,11 @@ func _process(delta: float) -> void:
 	pass
 	
 func level_won():
+	$RuneAnimation.play("Destroy")
+	SoundManager.play_sound("rune_shooting")
+	await $RuneAnimation.animation_finished
+	SoundManager.play_sound("door_expoding")
+	
+	await $Goblin/AnimatedSprite2D.animation_finished
 	$Karakter.start_walk()
+	SoundManager.play_sound("walking_stone")

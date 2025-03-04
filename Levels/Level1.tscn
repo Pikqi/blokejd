@@ -1,24 +1,12 @@
-[gd_scene load_steps=30 format=4 uid="uid://d0nfl3labvb3k"]
+[gd_scene load_steps=35 format=4 uid="uid://d0nfl3labvb3k"]
 
-[ext_resource type="Texture2D" uid="uid://bsk7iar7m1eji" path="res://assets/Background_Level_1.png" id="2_0wndg"]
+[ext_resource type="Texture2D" uid="uid://cu6558nr6oqof" path="res://assets/level1/Level_1.png" id="1_0heo0"]
 [ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://components/karakter_test.tscn" id="3_1hvn3"]
 [ext_resource type="Texture2D" uid="uid://6ecyseoejspq" path="res://assets/dialog_box.png" id="4_yamdn"]
-[ext_resource type="Texture2D" uid="uid://cqou6whkd7us5" path="res://assets/Vulture_Idle/Vulture_Idle_1.png" id="7_58ef2"]
+[ext_resource type="Texture2D" uid="uid://bpvwadmkmp1l2" path="res://assets/Vulture_end/Vulture_End_strip10.png" id="6_2dpca"]
+[ext_resource type="Texture2D" uid="uid://bs073ockv27i0" path="res://assets/Vulture_Idle/Vulture_Idle_strip.png" id="7_3ulxw"]
 [ext_resource type="PackedScene" uid="uid://u5ke56djwgur" path="res://components/words.tscn" id="7_sd5qj"]
-[ext_resource type="Texture2D" uid="uid://bfpeto8xvc2vq" path="res://assets/Vulture_end/Vulture_End_Animation_1.png" id="7_utelg"]
-[ext_resource type="Texture2D" uid="uid://8xm1ko1165a8" path="res://assets/Vulture_end/Vulture_End_Animation_2.png" id="8_k7e24"]
 [ext_resource type="TileSet" uid="uid://bcpa8ecnl6x1k" path="res://TileSets/tileset1.tres" id="8_pfuxe"]
-[ext_resource type="Texture2D" uid="uid://ccodupll6o2tj" path="res://assets/Vulture_Idle/Vulture_Idle_2.png" id="8_ypqxv"]
-[ext_resource type="Texture2D" uid="uid://bt5ijeqeq6jkr" path="res://assets/Vulture_end/Vulture_End_Animation_3.png" id="9_gr0cv"]
-[ext_resource type="Texture2D" uid="uid://df485iplu1d3b" path="res://assets/Vulture_Idle/Vulture_Idle_3.png" id="9_sw7bk"]
-[ext_resource type="Texture2D" uid="uid://dq6viagwo1gp4" path="res://assets/Vulture_Idle/Vulture_Idle_4.png" id="10_cvkp3"]
-[ext_resource type="Texture2D" uid="uid://une6jfxwxyr0" path="res://assets/Vulture_end/Vulture_End_Animation_4.png" id="10_wi23v"]
-[ext_resource type="Texture2D" uid="uid://bae31od54x73t" path="res://assets/Vulture_end/Vulture_End_Animation_5.png" id="11_e66iu"]
-[ext_resource type="Texture2D" uid="uid://bdga3vwi6lvle" path="res://assets/Vulture_end/Vulture_End_Animation_6.png" id="12_mwrf7"]
-[ext_resource type="Texture2D" uid="uid://dkp6jm1uqhnh2" path="res://assets/Vulture_end/Vulture_End_Animation_7.png" id="13_lepf2"]
-[ext_resource type="Texture2D" uid="uid://bbtbbe4208vh8" path="res://assets/Vulture_end/Vulture_End_Animation_8.png" id="14_qtkpk"]
-[ext_resource type="Texture2D" uid="uid://bli4xw0hnumkm" path="res://assets/Vulture_end/Vulture_End_Animation_9.png" id="15_1bd5m"]
-[ext_resource type="Texture2D" uid="uid://cb4s2kude6g3e" path="res://assets/Vulture_end/Vulture_End_Animation_10.png" id="16_khmdb"]
 [ext_resource type="Texture2D" uid="uid://db0uwco1m5n8b" path="res://assets/level1/Drvo Desno.png" id="20_rdg17"]
 [ext_resource type="Texture2D" uid="uid://er1d7wwx2fqr" path="res://assets/level1/Drvo Levo.png" id="21_v6kvm"]
 [ext_resource type="Texture2D" uid="uid://c32tltb3pbwy5" path="res://assets/level1/Drvo sa M Lijanom.png" id="22_fwcg4"]
@@ -52,35 +40,106 @@ func _exit_tree() -> void:
 	SoundManager.stop_sound(\"walking_grass\")
 "
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddmrp"]
+atlas = ExtResource("6_2dpca")
+region = Rect2(0, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsft6"]
+atlas = ExtResource("6_2dpca")
+region = Rect2(128, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lel6x"]
+atlas = ExtResource("6_2dpca")
+region = Rect2(256, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3xyg"]
+atlas = ExtResource("6_2dpca")
+region = Rect2(384, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eucsb"]
+atlas = ExtResource("6_2dpca")
+region = Rect2(512, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40tii"]
+atlas = ExtResource("6_2dpca")
+region = Rect2(640, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kiuc2"]
+atlas = ExtResource("6_2dpca")
+region = Rect2(768, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pywfs"]
+atlas = ExtResource("6_2dpca")
+region = Rect2(896, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8iss0"]
+atlas = ExtResource("6_2dpca")
+region = Rect2(1024, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgwbk"]
+atlas = ExtResource("6_2dpca")
+region = Rect2(1152, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8saxn"]
+atlas = ExtResource("6_2dpca")
+region = Rect2(896, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ond5r"]
+atlas = ExtResource("6_2dpca")
+region = Rect2(1024, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ma8yb"]
+atlas = ExtResource("6_2dpca")
+region = Rect2(1152, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwyrk"]
+atlas = ExtResource("7_3ulxw")
+region = Rect2(0, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmekh"]
+atlas = ExtResource("7_3ulxw")
+region = Rect2(128, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufngv"]
+atlas = ExtResource("7_3ulxw")
+region = Rect2(256, 0, 128, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx6y1"]
+atlas = ExtResource("7_3ulxw")
+region = Rect2(384, 0, 128, 130)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_tlr0c"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_utelg")
+"texture": SubResource("AtlasTexture_ddmrp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_k7e24")
+"texture": SubResource("AtlasTexture_xsft6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_gr0cv")
+"texture": SubResource("AtlasTexture_lel6x")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_wi23v")
+"texture": SubResource("AtlasTexture_c3xyg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_e66iu")
+"texture": SubResource("AtlasTexture_eucsb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_mwrf7")
+"texture": SubResource("AtlasTexture_40tii")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_lepf2")
+"texture": SubResource("AtlasTexture_kiuc2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_qtkpk")
+"texture": SubResource("AtlasTexture_pywfs")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_1bd5m")
+"texture": SubResource("AtlasTexture_8iss0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgwbk")
 }],
 "loop": false,
 "name": &"end",
@@ -88,13 +147,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 2.0,
-"texture": ExtResource("14_qtkpk")
+"texture": SubResource("AtlasTexture_8saxn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_1bd5m")
+"texture": SubResource("AtlasTexture_ond5r")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_khmdb")
+"texture": SubResource("AtlasTexture_ma8yb")
 }],
 "loop": true,
 "name": &"end_idle",
@@ -102,16 +161,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_58ef2")
+"texture": SubResource("AtlasTexture_gwyrk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_ypqxv")
+"texture": SubResource("AtlasTexture_wmekh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_sw7bk")
+"texture": SubResource("AtlasTexture_ufngv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_cvkp3")
+"texture": SubResource("AtlasTexture_yx6y1")
 }],
 "loop": true,
 "name": &"idle",
@@ -135,11 +194,12 @@ offset_right = 1280.0
 offset_bottom = 720.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("2_0wndg")
+texture = ExtResource("1_0heo0")
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
 [node name="Level" type="TileMapLayer" parent="."]
+visible = false
 z_index = 1
 texture_filter = 3
 position = Vector2(0, 1)
@@ -175,14 +235,14 @@ position = Vector2(-4, 34)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Vulture"]
 texture_filter = 3
-position = Vector2(556, 277)
+position = Vector2(546, 277)
 scale = Vector2(4, 3.963)
 sprite_frames = SubResource("SpriteFrames_tlr0c")
 animation = &"end_idle"
 autoplay = "idle"
-frame_progress = 0.565137
 
 [node name="DrvoDesno" type="Sprite2D" parent="."]
+visible = false
 texture_filter = 3
 position = Vector2(1094, 257)
 scale = Vector2(4, 4)
@@ -190,12 +250,14 @@ texture = ExtResource("20_rdg17")
 metadata/_edit_lock_ = true
 
 [node name="DrvoLevo" type="Sprite2D" parent="."]
+visible = false
 texture_filter = 3
 position = Vector2(192, 257)
 scale = Vector2(4, 4)
 texture = ExtResource("21_v6kvm")
 
 [node name="DrvoSaMLijanom" type="Sprite2D" parent="."]
+visible = false
 texture_filter = 3
 position = Vector2(886, 322)
 scale = Vector2(4, 4)

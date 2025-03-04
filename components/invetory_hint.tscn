@@ -12,6 +12,7 @@ stretch_mode = 4
 script = ExtResource("2_aslvm")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+texture_filter = 3
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 1
 anchors_preset = 15

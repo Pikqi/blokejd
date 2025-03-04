@@ -1,12 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dpheyo8ks032w"]
+[gd_scene load_steps=12 format=3 uid="uid://dpheyo8ks032w"]
 
 [ext_resource type="Script" path="res://Levels/tutorijal.gd" id="1_6601j"]
 [ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://components/karakter_test.tscn" id="1_e1e3i"]
 [ext_resource type="TileSet" uid="uid://bcpa8ecnl6x1k" path="res://TileSets/tileset1.tres" id="2_78wnl"]
-[ext_resource type="Texture2D" uid="uid://cb7oes0k0oynm" path="res://assets/tutorial/zid 2.png" id="3_f0prh"]
 [ext_resource type="Texture2D" uid="uid://dvy14egu6xggb" path="res://assets/tutorial/pod.png" id="4_5kcjl"]
+[ext_resource type="Texture2D" uid="uid://cq5hjdgydytje" path="res://assets/tutorial/Tutorial_Level.png" id="4_kd73p"]
 [ext_resource type="Texture2D" uid="uid://c7w4vty741ae1" path="res://assets/tutorial/SENO SLAMA.png" id="6_6ld2y"]
-[ext_resource type="Texture2D" uid="uid://mpumeuu2tkgd" path="res://assets/tutorial/lamp_post.png" id="7_bejml"]
 [ext_resource type="Script" path="res://Levels/words_2.gd" id="8_rhreb"]
 [ext_resource type="TileSet" uid="uid://curloulfinxeg" path="res://TileSets/lettersTileset.tres" id="9_1tixa"]
 [ext_resource type="Texture2D" uid="uid://6ecyseoejspq" path="res://assets/dialog_box.png" id="10_paeg0"]
@@ -22,7 +21,7 @@ position = Vector2(-2, -104)
 script = ExtResource("1_6601j")
 
 [node name="Karakter" parent="." instance=ExtResource("1_e1e3i")]
-position = Vector2(121, 590)
+position = Vector2(236, 705)
 scale = Vector2(4, 4)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -31,72 +30,67 @@ scale = Vector2(4, 4)
 tile_set = ExtResource("2_78wnl")
 
 [node name="TextureRect2" type="ColorRect" parent="."]
+visible = false
 texture_filter = 3
-offset_top = -22.0
+offset_top = 102.0
 offset_right = 1280.0
-offset_bottom = 698.0
+offset_bottom = 822.0
 color = Color(0.415686, 0.666667, 0.901961, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 3
-offset_top = -24.0
-offset_right = 1280.0
-offset_bottom = 696.0
-texture = ExtResource("3_f0prh")
+offset_left = 2.0
+offset_top = 104.0
+offset_right = 1282.0
+offset_bottom = 824.0
+texture = ExtResource("4_kd73p")
 metadata/_edit_use_anchors_ = true
 
 [node name="Pod" type="Sprite2D" parent="."]
+visible = false
 texture_filter = 3
 position = Vector2(640, 334)
 scale = Vector2(4, 4)
 texture = ExtResource("4_5kcjl")
 
 [node name="SenoSlama" type="Sprite2D" parent="."]
+visible = false
 z_index = 11
 texture_filter = 3
-position = Vector2(584, 573)
+position = Vector2(493, 554)
 scale = Vector2(4, 4)
 texture = ExtResource("6_6ld2y")
-
-[node name="LampPost" type="Sprite2D" parent="."]
-texture_filter = 3
-position = Vector2(847, 308)
-scale = Vector2(4, 4)
-texture = ExtResource("7_bejml")
-
-[node name="LampPost3" type="Sprite2D" parent="."]
-texture_filter = 3
-position = Vector2(1245, 308)
-scale = Vector2(4, 4)
-texture = ExtResource("7_bejml")
-
-[node name="LampPost2" type="Sprite2D" parent="."]
-texture_filter = 3
-position = Vector2(404, 308)
-scale = Vector2(4, 4)
-texture = ExtResource("7_bejml")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(1027, 576)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, -4)
+position = Vector2(27, -4)
 shape = SubResource("RectangleShape2D_ndpf0")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
 [node name="HintHack" type="StaticBody2D" parent="."]
+position = Vector2(-80, 94)
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HintHack"]
 position = Vector2(512, 644)
 shape = SubResource("CircleShape2D_pdla2")
 
+[node name="HintHack2" type="StaticBody2D" parent="."]
+position = Vector2(20, 93)
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HintHack2"]
+position = Vector2(512, 644)
+shape = SubResource("CircleShape2D_pdla2")
+
 [node name="Words2" type="Node2D" parent="." groups=["word"]]
 z_index = 200
-position = Vector2(747, 201)
+position = Vector2(811, 274)
 script = ExtResource("8_rhreb")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Words2"]
@@ -121,3 +115,4 @@ tile_set = ExtResource("9_1tixa")
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="input_event" from="HintHack" to="." method="_on_hint_hack_input_event"]
+[connection signal="input_event" from="HintHack2" to="." method="_on_hint_hack_input_event"]

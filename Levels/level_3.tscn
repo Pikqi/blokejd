@@ -1,19 +1,126 @@
-[gd_scene load_steps=6 format=3 uid="uid://btf77a0bm41qq"]
+[gd_scene load_steps=25 format=3 uid="uid://btf77a0bm41qq"]
 
 [ext_resource type="PackedScene" uid="uid://u5ke56djwgur" path="res://components/words.tscn" id="1_xr3l4"]
 [ext_resource type="Script" path="res://Levels/level_3.gd" id="1_ywpon"]
 [ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://components/karakter_test.tscn" id="2_vw448"]
+[ext_resource type="Texture2D" uid="uid://6ecyseoejspq" path="res://assets/dialog_box.png" id="3_5n5ei"]
 [ext_resource type="PackedScene" uid="uid://cl7ls8hfg7qpg" path="res://components/hint.tscn" id="3_vofie"]
-[ext_resource type="Texture2D" uid="uid://parcptrowo5a" path="res://icon.svg" id="4_av4y4"]
+[ext_resource type="Texture2D" uid="uid://dh6vc34u5rkvm" path="res://assets/Level_3_Mockup.png" id="6_i85tv"]
+[ext_resource type="Texture2D" uid="uid://b5mxy3gka3er8" path="res://assets/level3/Level_3_End_1.png" id="7_tg8il"]
+[ext_resource type="Texture2D" uid="uid://ovojrtfiroum" path="res://assets/level3/Level_3_End_2.png" id="8_x8qma"]
+[ext_resource type="Texture2D" uid="uid://dlruavq23odwf" path="res://assets/level3/Level_3_End_3.png" id="9_xw2ok"]
+[ext_resource type="Texture2D" uid="uid://bwprigukxqym0" path="res://assets/level3/Level_3_End_4.png" id="10_5frax"]
+[ext_resource type="Texture2D" uid="uid://dpnbp6yywpt07" path="res://assets/level3/Level_3_End_5.png" id="11_lhfoq"]
+[ext_resource type="Texture2D" uid="uid://bwrx7ikvju5y1" path="res://assets/level3/Level_3_End_6.png" id="12_27l5i"]
+[ext_resource type="Texture2D" uid="uid://dvlfdejttu4mk" path="res://assets/level3/Level_3_End_7.png" id="13_4n50f"]
+[ext_resource type="Texture2D" uid="uid://cl4nial2wtnqc" path="res://assets/level3/Level_3_End_8.png" id="14_7fk7h"]
+[ext_resource type="Texture2D" uid="uid://daqbmemsa6ayt" path="res://assets/level3/Level_3_End_9.png" id="15_27shx"]
+[ext_resource type="Texture2D" uid="uid://6t76bnq3fv6x" path="res://assets/level3/Level_3_End_10.png" id="16_jtk8t"]
+[ext_resource type="Texture2D" uid="uid://rk5o53pam4vy" path="res://assets/level3/Level_3_End_11.png" id="17_l0um6"]
+[ext_resource type="Texture2D" uid="uid://b7oygx6icaqt2" path="res://assets/level3/Level_3_End_12.png" id="18_cp6v7"]
+[ext_resource type="Texture2D" uid="uid://b4e35ekta5o6o" path="res://assets/level3/Level_3_End_13.png" id="19_gvgxg"]
+[ext_resource type="Texture2D" uid="uid://buwmnse4dntru" path="res://assets/level3/Level_3_End_14.png" id="20_j1prf"]
+[ext_resource type="Texture2D" uid="uid://e241ws4tfs4v" path="res://assets/level3/Level_3_End_15.png" id="21_gfca8"]
+[ext_resource type="Texture2D" uid="uid://bpiyfspuo1l1q" path="res://assets/level3/Level_3_End_16.png" id="22_armli"]
+[ext_resource type="Texture2D" uid="uid://dskmqrp2m43u8" path="res://assets/level3/Level_3_End_17.png" id="23_t4jm1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_af3qs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_tg8il")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_x8qma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xw2ok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5frax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_lhfoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_27l5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4n50f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7fk7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_27shx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jtk8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_l0um6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_cp6v7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_gvgxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_j1prf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gfca8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_armli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_t4jm1")
+}],
+"loop": false,
+"name": &"Destroy",
+"speed": 5.0
+}]
 
 [node name="Level3" type="Node2D" groups=["level"]]
 script = ExtResource("1_ywpon")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 3
+offset_right = 320.0
+offset_bottom = 180.0
+scale = Vector2(4.04602, 4.04602)
+texture = ExtResource("6_i85tv")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+texture_filter = 3
+offset_left = 289.0
+offset_top = 103.0
+offset_right = 393.525
+offset_bottom = 125.89
+scale = Vector2(4, 4)
+texture = ExtResource("3_5n5ei")
+region_rect = Rect2(10, 14, 56, 20)
+patch_margin_left = 6
+patch_margin_top = 7
+patch_margin_right = 2
+patch_margin_bottom = 7
+
 [node name="Words" parent="." instance=ExtResource("1_xr3l4")]
+position = Vector2(333, 127)
 
 [node name="Karakter" parent="." instance=ExtResource("2_vw448")]
+position = Vector2(79, 468)
+scale = Vector2(5, 5)
 
 [node name="Hint" parent="." instance=ExtResource("3_vofie")]
-position = Vector2(414, 221)
-image = ExtResource("4_av4y4")
+position = Vector2(414, 326)
 letter = "b"
+
+[node name="RuneAnimation" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+position = Vector2(654, 359)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_af3qs")
+animation = &"Destroy"
