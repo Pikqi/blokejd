@@ -5,7 +5,8 @@ const LEVEL_2 = preload("res://Levels/level_2.tscn")
 const LEVEL_3 = preload("res://Levels/level_3.tscn")
 const PROLOUGE = preload("res://Levels/prolouge.tscn")
 const TUTORIJAL = preload("res://Levels/tutorijal.tscn")
-var scenes: Array[PackedScene] = [PROLOUGE,TUTORIJAL, LEVEL_1, LEVEL_2, LEVEL_3]
+const EPILOGE = preload("res://Levels/epiloge.tscn")
+var scenes: Array[PackedScene] = [PROLOUGE,TUTORIJAL, LEVEL_1, LEVEL_2, LEVEL_3, EPILOGE]
 var level = 0
 @export var enable_dialogs = true
 
@@ -39,6 +40,7 @@ func on_hint_clicked(hint: Hint):
 	
 func level_passed():
 	(get_tree().get_first_node_in_group("level")).level_won()
+
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -50,6 +52,8 @@ func handle_character_exited():
 		return
 	#TransitionRect.transition_to(scenes[level])
 	TransitionAnimationScene.transition_to(scenes[level], level)
+	SoundManager.stop_sound("walking_grass")
+	SoundManager.stop_sound("walking_stone")
 	pass
 
 func new_scene():

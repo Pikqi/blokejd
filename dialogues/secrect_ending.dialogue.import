@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://c2b5yio55mide"
+path="res://.godot/imported/secrect_ending.dialogue-595d0ca3ae64cd46352c94e222ab0017.tres"
+
+[deps]
+
+source_file="res://dialogues/secrect_ending.dialogue"
+dest_files=["res://.godot/imported/secrect_ending.dialogue-595d0ca3ae64cd46352c94e222ab0017.tres"]
+
+[params]
+
+defaults=true

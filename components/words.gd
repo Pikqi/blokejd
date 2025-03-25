@@ -3,6 +3,7 @@ class_name Words
 
 @export var init_text: String = "đamuž"
 @export var wanted: String = "best"
+@export var wanted2: String = "best1234"
 @export var width = 10
 @onready var text_size = init_text.length()
 @onready var text = init_text
@@ -61,7 +62,7 @@ func handle_letter_pressed(index: int):
 	text=new_text
 	draw_text()
 	
-	if(text == wanted):
+	if(text == wanted or text == wanted2):
 		win.emit()
 		won = true
 		print_debug("win")

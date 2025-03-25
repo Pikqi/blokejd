@@ -22,4 +22,4 @@ func level_won():
 	SoundManager.play_sound("walking_stone")
 
 func _exit_tree() -> void:
-	SoundManager.stop_sound("walking_grass")
+	SoundManager.stop_sound("walking_stone")

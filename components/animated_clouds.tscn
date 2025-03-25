@@ -1,0 +1,86 @@
+[gd_scene load_steps=13 format=3 uid="uid://dr7tbqvesstc5"]
+
+[ext_resource type="Texture2D" uid="uid://bvxjl3ike28rh" path="res://assets/Clouds_Background_Animation.png" id="1_hfcbw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eyu0r"]
+atlas = ExtResource("1_hfcbw")
+region = Rect2(0, 0, 320, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjg0o"]
+atlas = ExtResource("1_hfcbw")
+region = Rect2(320, 0, 320, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qkvh"]
+atlas = ExtResource("1_hfcbw")
+region = Rect2(640, 0, 320, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bw1xw"]
+atlas = ExtResource("1_hfcbw")
+region = Rect2(960, 0, 320, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q140m"]
+atlas = ExtResource("1_hfcbw")
+region = Rect2(1280, 0, 320, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yabmt"]
+atlas = ExtResource("1_hfcbw")
+region = Rect2(1600, 0, 320, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjawn"]
+atlas = ExtResource("1_hfcbw")
+region = Rect2(1920, 0, 320, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5m7q"]
+atlas = ExtResource("1_hfcbw")
+region = Rect2(2240, 0, 320, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6kfa"]
+atlas = ExtResource("1_hfcbw")
+region = Rect2(2560, 0, 320, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lp7qk"]
+atlas = ExtResource("1_hfcbw")
+region = Rect2(2880, 0, 320, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n7wxt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eyu0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjg0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qkvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bw1xw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q140m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yabmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjawn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5m7q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6kfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lp7qk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="AnimatedClouds" type="AnimatedSprite2D"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_n7wxt")
+autoplay = "default"

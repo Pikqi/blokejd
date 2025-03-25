@@ -1,11 +1,13 @@
-[gd_scene load_steps=32 format=3 uid="uid://d0nfl3labvb3k"]
+[gd_scene load_steps=34 format=3 uid="uid://d0nfl3labvb3k"]
 
 [ext_resource type="Texture2D" uid="uid://cu6558nr6oqof" path="res://assets/level1/Level_1.png" id="1_0heo0"]
+[ext_resource type="Texture2D" uid="uid://b3y6vlpktw4i3" path="res://assets/level1/Level_1_Back_Background.png" id="1_n8kgh"]
 [ext_resource type="PackedScene" uid="uid://dxy3yeut2p5rk" path="res://components/karakter_test.tscn" id="3_1hvn3"]
 [ext_resource type="Texture2D" uid="uid://6ecyseoejspq" path="res://assets/dialog_box.png" id="4_yamdn"]
 [ext_resource type="Texture2D" uid="uid://bpvwadmkmp1l2" path="res://assets/Vulture_end/Vulture_End_strip10.png" id="6_2dpca"]
 [ext_resource type="Texture2D" uid="uid://bs073ockv27i0" path="res://assets/Vulture_Idle/Vulture_Idle_strip.png" id="7_3ulxw"]
 [ext_resource type="PackedScene" uid="uid://u5ke56djwgur" path="res://components/words.tscn" id="7_sd5qj"]
+[ext_resource type="PackedScene" uid="uid://dr7tbqvesstc5" path="res://components/animated_clouds.tscn" id="11_t88qc"]
 [ext_resource type="PackedScene" uid="uid://cl7ls8hfg7qpg" path="res://components/hint.tscn" id="23_g3im6"]
 [ext_resource type="Texture2D" uid="uid://lxt605n8qt3f" path="res://assets/level1/M Lijane.png" id="23_o8yb6"]
 [ext_resource type="Texture2D" uid="uid://bxmsiwtxpojsw" path="res://assets/level1/Obicne Lijane.png" id="25_1wp7u"]
@@ -185,8 +187,18 @@ size = Vector2(45.75, 41.5)
 [node name="Level1" type="Node2D" groups=["level"]]
 script = SubResource("GDScript_ktprr")
 
+[node name="Level1BackBackground" type="TextureRect" parent="."]
+visible = false
+offset_right = 320.0
+offset_bottom = 180.0
+scale = Vector2(4, 4)
+texture = ExtResource("1_n8kgh")
+
+[node name="AnimatedClouds" parent="." instance=ExtResource("11_t88qc")]
+visible = false
+position = Vector2(643, 128)
+
 [node name="Background" type="TextureRect" parent="."]
-z_index = -1
 texture_filter = 3
 custom_minimum_size = Vector2(1280, 720)
 offset_right = 1280.0

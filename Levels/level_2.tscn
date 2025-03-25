@@ -210,11 +210,11 @@ script = ExtResource("1_uebjr")
 texture_filter = 3
 offset_right = 320.0
 offset_bottom = 180.0
-scale = Vector2(4.00356, 4.01477)
+scale = Vector2(4, 4)
 texture = ExtResource("2_7y7q0")
 
 [node name="Karakter" parent="." instance=ExtResource("3_p2taw")]
-position = Vector2(299, 476)
+position = Vector2(340, 476)
 scale = Vector2(4, 4)
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]

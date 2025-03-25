@@ -8,6 +8,7 @@ extends Node
 @onready var rune_shooting: AudioStreamPlayer = $RuneShooting
 @onready var walking_grass: AudioStreamPlayer = $WalkingGrass
 @onready var walking_stone: AudioStreamPlayer = $WalkingStone
+@onready var door_exploding: AudioStreamPlayer = $DoorExploding
 
 
 func play_sound(key):

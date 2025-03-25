@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://b0vb6f1db8qiv" path="res://components/Guard.tscn" id="11_fidvp"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pnpob"]
-load_path = "res://.godot/imported/SENO SLAMA.png-ffd9d765cc3a58219d13995361010749.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ndpf0"]
 size = Vector2(20, 208)
